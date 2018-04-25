@@ -1,0 +1,37 @@
+.home__signboard {
+	position: relative;
+	padding-bottom: 85px;
+}
+
+.signboard__banner {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.signboard__tagline {
+	display: inline-block;
+	text-align: left;
+	vertical-align: middle;
+	padding-top: 65px;
+	padding-left: 55px;
+}
+
+.signboard__font-gagalin {
+	font-family: gagalin;
+	font-size: 72px;
+	color: #f9b43b;
+	margin-bottom: 10px;
+}
+
+.signboard__font-lifehack {
+	font-family: lifehack;
+	font-size: 63px;
+	color: #fff;
+}
+
+
+
+
+
+
+

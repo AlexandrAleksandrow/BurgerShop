@@ -1,0 +1,31 @@
+.sidebar {
+	display: block;
+	position: fixed;
+	top: 89px;
+	right: 290px;
+}
+
+.sidebar__link {
+	display: block;
+}
+
+.sidebar__circle {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	border: 1px solid transparent;
+    border-radius: 50%;
+    position: relative;
+    vertical-align: middle;
+}
+
+.sidebar__point {
+	position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fff;
+}
