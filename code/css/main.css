@@ -7,6 +7,7 @@
 @import url(./layout/fonts.css);
 
 /*blocks*/
+/*home*/
 
 @import url(./blocks/home.css);
 
@@ -16,4 +17,10 @@
 
 @import url(./blocks/signboard.css);
 
+/*summary*/
 
+@import url(./blocks/summary.css);
+
+@import url(./blocks/summary_caption.css);
+
+@import url(./blocks/summary_list.css);

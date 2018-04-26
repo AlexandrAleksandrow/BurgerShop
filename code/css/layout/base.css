@@ -21,11 +21,11 @@ ul {
 	position: relative;
 }
 
-.wrapper::after {
+/*.wrapper::after {
 	content: "";
 	display: block;
 	height: 75px;
-}
+}*/
 
 .clearfix:after {
     content: "";

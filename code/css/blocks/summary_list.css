@@ -1,0 +1,33 @@
+.summary__list {
+	position: relative;
+	text-align: center;
+}
+
+.summary__item {
+	float: left;
+	width: 33%;
+	padding-right: 15px;
+}
+
+.summary__pic {
+	width:;
+	height: ;
+	padding-bottom: 30px;
+}
+
+.summary__subtitle {
+	font-family: lifehack;
+	font-size: 24px;
+	padding-bottom: 10px;	 
+}
+
+.summary__text {
+	font-family: "ubuntu";
+	font-size: 14px;
+	color: #838281;
+	line-height: 1.9;
+	text-align: center;
+}
+
+
+

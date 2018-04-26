@@ -29,3 +29,7 @@
     border-radius: 50%;
     background: #fff;
 }
+
+.sidebar__circle:hover {
+	border-color: #ffffff;
+}
