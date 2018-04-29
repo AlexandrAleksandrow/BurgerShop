@@ -5,4 +5,7 @@
 	height: 100vh;
 	min-height: 650px; 
 	background-size: cover;
+	font-family: ubuntu, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #fff;
 }

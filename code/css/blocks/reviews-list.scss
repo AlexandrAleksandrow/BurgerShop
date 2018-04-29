@@ -1,24 +1,69 @@
 .reviews__container {
   padding-right: 0px;
-	padding-left: 0px;
+  padding-left: 0px;
+  width: 100%;
+  height: 100%;
 }
 
 .reviews__list {
-  position: relative;
-  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
 }
 
 .reviews__item {
-  display: block;
-  float: left;
-  width: 275px;
-  height: 325px;
-  margin: 0;
-  padding: 0;
+  display: inline-block;
+  vertical-align: top;
+  width: calc(100% / 4);
+  height: calc(100% / 2);
+  font-size: 14px;
 }
 
 @each $reviews in (f1, f2, f3, f4, f5, f6, f7, f8) {
   .reviews__item-#{$reviews} {
-    background: url(../../../ifc/faces/#{$reviews}.jpg) center center no-repeat;
+    background: url(../../../ifc/faces/#{$reviews}.jpg) center center/cover no-repeat;
   }
+}
+
+.reviews__content {
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+  padding-left: 20px;
+  opacity: 0;
+}
+
+.reviews__content:hover {
+  opacity: 1;
+  transition: .4s;
+}
+
+.reviews__name {
+  font-family: "Gagalin";
+  font-size: 14px;
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.reviews__text {
+  line-height: 2.008;
+  margin-bottom: 17px;
+}
+
+.reviews__submit {
+	display: block;
+	width: 110px;
+	height: 35px;
+	background:#2f3234;
+  border: 1px solid #2f3234;
+  color: #fff;
+	border-radius: 4px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 7px;
+}
+
+.reviews__submit:hover {
+  text-decoration: underline;
 }
