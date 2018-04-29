@@ -1,0 +1,24 @@
+.reviews__container {
+  padding-right: 0px;
+	padding-left: 0px;
+}
+
+.reviews__list {
+  position: relative;
+  display: inline-block;
+}
+
+.reviews__item {
+  display: block;
+  float: left;
+  width: 275px;
+  height: 325px;
+  margin: 0;
+  padding: 0;
+}
+
+@each $reviews in (f1, f2, f3, f4, f5, f6, f7, f8) {
+  .reviews__item-#{$reviews} {
+    background: url(../../../ifc/faces/#{$reviews}.jpg) center center no-repeat;
+  }
+}

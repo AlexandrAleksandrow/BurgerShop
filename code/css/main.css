@@ -1,6 +1,6 @@
 /*layout*/
 
-@import url(./layout/normalize.css)
+@import url(./layout/normalize.css);
 
 @import url(./layout/base.css);
 
@@ -24,3 +24,9 @@
 @import url(./blocks/summary_caption.css);
 
 @import url(./blocks/summary_list.css);
+
+/*reviews*/
+
+@import url(./blocks/reviews.css);
+
+@import url(./blocks/reviews-list.css);

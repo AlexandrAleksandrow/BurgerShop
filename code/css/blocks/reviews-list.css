@@ -1,0 +1,39 @@
+.reviews__container {
+  padding-right: 0px;
+  padding-left: 0px; }
+
+.reviews__list {
+  position: relative;
+  display: inline-block; }
+
+.reviews__item {
+  display: block;
+  float: left;
+  width: 275px;
+  height: 325px;
+  margin: 0;
+  padding: 0; }
+
+.reviews__item-f1 {
+  background: url(../../../ifc/faces/f1.jpg) center center no-repeat; }
+
+.reviews__item-f2 {
+  background: url(../../../ifc/faces/f2.jpg) center center no-repeat; }
+
+.reviews__item-f3 {
+  background: url(../../../ifc/faces/f3.jpg) center center no-repeat; }
+
+.reviews__item-f4 {
+  background: url(../../../ifc/faces/f4.jpg) center center no-repeat; }
+
+.reviews__item-f5 {
+  background: url(../../../ifc/faces/f5.jpg) center center no-repeat; }
+
+.reviews__item-f6 {
+  background: url(../../../ifc/faces/f6.jpg) center center no-repeat; }
+
+.reviews__item-f7 {
+  background: url(../../../ifc/faces/f7.jpg) center center no-repeat; }
+
+.reviews__item-f8 {
+  background: url(../../../ifc/faces/f8.jpg) center center no-repeat; }
