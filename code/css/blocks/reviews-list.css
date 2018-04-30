@@ -41,10 +41,10 @@
   background: url(../../../ifc/faces/f8.jpg) center center/cover no-repeat; }
 
 .reviews__content {
-  width: 100%;
+  width: 90%;
   height: 100%;
-  padding-top: 50px;
-  padding-left: 20px;
+  padding-top: 14%;
+  padding-left: 7%;
   opacity: 0; }
 
 .reviews__content:hover {
@@ -57,8 +57,9 @@
   font-family: "Gagalin";
   font-size: 14px;
   text-align: left;
-  font-weight: 700;
-  margin-bottom: 30px; }
+  font-weight: 500;
+  margin-bottom: 30px;
+  letter-spacing: 1.2px; }
 
 .reviews__text {
   line-height: 2.008;
@@ -74,7 +75,5 @@
   border-radius: 4px;
   text-transform: uppercase;
   text-align: center;
-  padding-top: 7px; }
-
-.reviews__submit:hover {
-  text-decoration: underline; }
+  padding-top: 7px;
+  text-decoration: none; }

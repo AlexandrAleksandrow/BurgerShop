@@ -22,50 +22,52 @@
   vertical-align: middle; }
 
 .header__logo {
-  width: 10%;
-  text-align: left; }
+  width: 15%;
+  text-align: left;
+}
 
 .logo_link {
   display: inline-block;
   width: 92px;
   height: 69px;
-  margin-right: 4px; }
+  }
 
 .header__navigation {
-  width: 78%;
+  width: 74.68%;
   text-align: right;
-  margin-right: 15px;
+  padding-right: 0px;
   padding-top: 28px; }
 
-.header__button {
+ .header__button {
   width: 10.32%;
-  padding-top: 17px; }
+  padding-top: 17px;
+text-align: right; }
 
 .header__item {
   display: inline-block;
   text-transform: uppercase;
-  padding-left: 16px;
-  padding-right: 16px; }
+  }
 
 .header__item:after {
   content: "";
-  position: absolute;
+  /*position: absolute;*/
+  display: inline-block;
   width: 4px;
   height: 4px;
   border-radius: 50%;
   background: #fff;
-  bottom: 50%;
-  right: 50%;
-  -webkit-transform: translate(400%);
-  -ms-transform: translate(400%);
-  transform: translate(400%); }
+  margin-right: 14px;
+  margin-left: 14px;
+  margin-bottom: 3px;
+  }
 
 .header__item:nth-child(6) {
   padding-right: 0px; }
 
 .header__item:nth-child(6):after {
   width: 0px;
-  height: 0px; }
+  height: 0px;
+  margin-right: 0px; }
 
 .header__link {
   text-decoration: none;
@@ -82,7 +84,11 @@
   border: 1px solid #e45028;
   border-radius: 4px;
   color: #ffffff;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 9px;
+  text-decoration: none;
+}
 
 .header__submit:hover {
   background: #c1401e;

@@ -1,8 +1,8 @@
 .sidebar {
 	display: block;
 	position: fixed;
-	top: 89px;
-	right: 290px;
+	top: 15%;
+	right: 3%;
 }
 
 .sidebar__link {

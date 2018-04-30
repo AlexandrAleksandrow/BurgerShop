@@ -26,10 +26,10 @@
 }
 
 .reviews__content {
-  width: 100%;
+  width: 90%;
   height: 100%;
-  padding-top: 50px;
-  padding-left: 20px;
+  padding-top: 14%;
+  padding-left: 7%;
   opacity: 0;
 }
 
@@ -42,8 +42,9 @@
   font-family: "Gagalin";
   font-size: 14px;
   text-align: left;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 30px;
+  letter-spacing: 1.2px;
 }
 
 .reviews__text {
@@ -62,8 +63,5 @@
   text-transform: uppercase;
   text-align: center;
   padding-top: 7px;
-}
-
-.reviews__submit:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
