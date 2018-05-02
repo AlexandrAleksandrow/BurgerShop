@@ -1,0 +1,80 @@
+.team__content {
+  position: absolute;
+  left: 51%;
+  width: 49%;
+  height: 100%;
+  background: #303234;
+  opacity: .9;
+  color: #fff;
+  padding-top: 110px;
+  padding-left: 95px;
+}
+
+.team_caption {
+  margin-bottom: 45px;
+}
+
+.accordion__item {
+  margin-bottom: 30px;
+  width: 90%;
+  margin-right: 0px;
+}
+
+.accordion__item:last-child {
+  margin-bottom: 0px;
+}
+
+.accordion__title {
+  font-size: 14px;
+  font-family: "Gagalin";
+  font-weight: 500;
+  margin-bottom: 20px;
+
+  &:hover {
+    color: #dfa43b;
+  }
+
+  &:hover + .accordion__content {
+    height: 100px;
+  }
+
+  &:before {
+  content: "";
+  display: block;
+  float: left;
+  margin-right: 10px;
+  margin-top: 4px;
+  border-top: 0px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #dfa43b;
+	border-left: 10px solid transparent;
+  }
+  
+  &:hover:before {
+    content: "";
+    display: block;
+    float: left;
+    margin-right: 10px;
+    margin-top: 4px;
+    border-top: 10px solid #dfa43b;
+    border-right: 10px solid transparent;
+    border-bottom:  0px solid transparent;
+    border-left: 10px solid transparent;
+    }
+}
+
+.accordion__content {
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.accordion__img {
+  margin-right: 20px;
+  transition: 1s;
+}
+
+.accordion__position {
+  margin-bottom: 20px;
+}

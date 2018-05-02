@@ -17,13 +17,13 @@
 	padding-left: 10px;
 }
 
-.signboard__font-gagalin {
+.caption {
 	font-family: gagalin;
 	font-size: 72px;
 	color: #f9b43b;
 	}
 
-.signboard__font-lifehack {
+.signboard__text {
 	font-family: lifehack;
 	font-size: 63px;
 	color: #fff;
