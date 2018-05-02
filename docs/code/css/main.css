@@ -12,3 +12,5 @@
 @import url(./blocks/reviews-list.css);
 @import url(./blocks/team.css);
 @import url(./blocks/team__content.css);
+@import url(./blocks/menu.css);
+@import url(./blocks/menu__accordion.css);
