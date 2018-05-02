@@ -1,0 +1,52 @@
+.footer {
+ display: flex;
+ position: absolute;
+ width: 100%;
+ min-height: 60px;
+ bottom: 0;
+ background: url(../../../ifc/footerbg.png)
+}
+
+.footer__left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: #fff;
+  width: 50%;
+  min-height: 60px; 
+  font-size: 14px;
+  font-family: "Ubuntu";
+  text-align: left;
+}
+
+.footer__adress {
+  display: flex;
+  width: 100%;
+}
+
+.footer__phone {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  color: #e45028;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.footer__phone:before {
+  content: "";
+  display: flex;
+  width: 12px;
+  height: 12px;
+  background: url(../../../ifc/phone.png) center center no-repeat;
+  margin-right: 10px;
+  }
+
+.footer__right {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 50%;
+  min-height: 60px;
+  text-align: right;
+}
