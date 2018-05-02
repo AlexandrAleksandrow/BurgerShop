@@ -1,0 +1,81 @@
+.team__content {
+  width: 49%;
+  height: 100%;
+  position: absolute;
+  left: 51%;
+  background: #2f3133;
+  opacity: 0.9;
+  color: #fff;
+  padding-top: 113px;
+  padding-left: 95px; }
+
+.team_caption {
+  color: #f9b43b;
+  margin-bottom: 60px; }
+
+.accordion__content {
+  height: 0;
+  overflow: hidden; }
+
+/*.accordion__content--active {
+  height: 100px;
+}*/
+.accordion__item {
+  margin-bottom: 35px;
+  margin-right: 0px;
+  width: 90%; }
+
+.accordion__item:last-child {
+  margin-bottom: 0px; }
+
+.accordion__title {
+  position: relative;
+  font-family: "Gagalin";
+  font-size: 14px;
+  text-align: left;
+  font-weight: 500;
+  margin-bottom: 18px;
+  letter-spacing: 1.2px;
+  cursor: pointer; }
+  .accordion__title:hover {
+    color: #f9b43b; }
+  .accordion__title:hover + .accordion__content {
+    height: 100px;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s; }
+  .accordion__title:before {
+    content: "";
+    display: block;
+    float: left;
+    border-top: 10px solid #f9b43b;
+    border-right: 10px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-left: 10px solid transparent;
+    margin-right: 10px;
+    margin-top: 4px; }
+  .accordion__title:hover:before {
+    content: "";
+    display: block;
+    float: left;
+    border-top: 0px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #f9b43b;
+    border-left: 10px solid transparent;
+    margin-right: 10px;
+    margin-top: 4px; }
+
+.accordion__img {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 20px; }
+
+.accordion__text {
+  display: inline-block;
+  vertical-align: middle; }
+
+.accordion__position {
+  font-weight: 500; }
+
+.accordion__duties {
+  font-weight: 300; }
