@@ -30,6 +30,7 @@
   font-weight: 500;
   margin-bottom: 20px;
   width: 50%;
+  cursor: pointer;
 
   &:hover {
     color: #dfa43b;
@@ -39,7 +40,7 @@
     height: 100px;
   }
 
-  &:before {
+    &:before {
   content: "";
   display: block;
   float: left;
@@ -62,6 +63,7 @@
   overflow: hidden;
   display: flex;
   align-items: center;
+  z-index: 10;
 }
 
 /*.accordion__content--active {
@@ -74,6 +76,7 @@
 .accordion__img {
   margin-right: 20px;
   transition: 1s;
+  border-radius: 50%;
 }
 
 .accordion__position {

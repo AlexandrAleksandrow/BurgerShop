@@ -1,0 +1,36 @@
+.menu__caption {
+  display: inline-block;
+  color: #fff;
+  padding-top: 110px;
+  padding-left: 90px;
+}
+
+.menu_block {
+  position: absolute;
+  width: 100vh;
+  transform-origin: left bottom;
+  transform: translateX(100%) rotate(-90deg);
+  right: 0;
+  bottom: 0;
+}
+
+.menu__acordion-title {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding-left: 40px;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-family: "Gagalin";
+  font-weight: 500;
+}
+
+.menu__accordion-text {
+  position: absolute;
+  height: 100vh;
+  width: 540px;
+  transform-origin: left bottom;
+  transform: translateX(100%) rotate(90deg);
+  right: 0;
+  bottom: 0;
+}

@@ -25,7 +25,8 @@
   font-family: "Gagalin";
   font-weight: 500;
   margin-bottom: 20px;
-  width: 50%; }
+  width: 50%;
+  cursor: pointer; }
   .accordion__title:hover {
     color: #dfa43b; }
   .accordion__title:hover + .accordion__content {
@@ -56,7 +57,8 @@
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  z-index: 10; }
 
 /*.accordion__content--active {
   height: 100px;
@@ -68,7 +70,8 @@
   margin-right: 20px;
   -webkit-transition: 1s;
   -o-transition: 1s;
-  transition: 1s; }
+  transition: 1s;
+  border-radius: 50%; }
 
 .accordion__position {
   margin-bottom: 20px; }
