@@ -62,6 +62,84 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   width: 50%;
-  min-height: 60px;
-  text-align: right; }
+  min-height: 60px; }
+
+.social__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.social__item {
+  margin-right: 20px; }
+
+.social__item:nth-child(4) {
+  margin-right: 0px; }
+
+.social__bg {
+  content: "";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: transparent;
+  width: 23px;
+  height: 23px; }
+
+.social__img-vk {
+  display: block;
+  width: 23px;
+  height: 23px;
+  background: url(../../../ifc/fsp.png) -10px 4px no-repeat; }
+  .social__img-vk:hover {
+    background: url(../../../ifc/fsph.png) -10px 4px no-repeat;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s; }
+
+.social__img-fb {
+  display: block;
+  width: 23px;
+  height: 23px;
+  background: url(../../../ifc/fsp.png) -10px -23px no-repeat; }
+  .social__img-fb:hover {
+    background: url(../../../ifc/fsph.png) -10px -23px no-repeat;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s; }
+
+.social__img-inst {
+  display: block;
+  width: 23px;
+  height: 23px;
+  background: url(../../../ifc/fsp.png) -9px -53px no-repeat; }
+  .social__img-inst:hover {
+    background: url(../../../ifc/fsph.png) -9px -53px no-repeat;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s; }
+
+.social__img-tw {
+  display: block;
+  width: 23px;
+  height: 23px;
+  background: url(../../../ifc/fsp.png) -9px -80px no-repeat; }
+  .social__img-tw:hover {
+    background: url(../../../ifc/fsph.png) -9px -80px no-repeat;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s; }

@@ -46,7 +46,79 @@
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
+  justify-content: flex-end;
   width: 50%;
   min-height: 60px;
-  text-align: right;
+}
+
+.social__list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.social__item {
+  margin-right: 20px;
+}
+
+.social__item:nth-child(4) {
+  margin-right: 0px;
+}
+
+.social__bg {
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  width: 23px;
+  height: 23px;
+}
+
+.social__img-vk {
+  display: block;
+  width: 23px;
+  height: 23px;
+  background: url(../../../ifc/fsp.png) -10px 4px no-repeat;
+
+  &:hover{
+    background: url(../../../ifc/fsph.png) -10px 4px no-repeat;
+    transition: .5s;
+  }
+}
+
+.social__img-fb {
+  display: block;
+  width: 23px;
+  height: 23px;
+  background: url(../../../ifc/fsp.png) -10px -23px no-repeat;
+
+  &:hover{
+    background: url(../../../ifc/fsph.png) -10px -23px no-repeat;
+    transition: .5s;
+  }
+}
+
+.social__img-inst {
+  display: block;
+  width: 23px;
+  height: 23px;
+  background: url(../../../ifc/fsp.png) -9px -53px no-repeat;
+  
+  &:hover{
+    background: url(../../../ifc/fsph.png) -9px -53px no-repeat;
+    transition: .5s;
+  }
+}
+
+.social__img-tw {
+  display: block;
+  width: 23px;
+  height: 23px;
+  background: url(../../../ifc/fsp.png) -9px -80px no-repeat;
+
+  &:hover{
+    background: url(../../../ifc/fsph.png) -9px -80px no-repeat;
+    transition: .5s;
+  }
 }
