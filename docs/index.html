@@ -244,19 +244,24 @@
   <div class="ordering container">
   <div class="ordering__caption caption">закажите доставку</div>
   <form method="get" name="form" class="form">
-  <div class="form__left">
-    <div class="form__item">   
-    <label class="form__label">Имя</label>
-    <input type="text" name="name" class="form__input">						
-   </div>
-   <div class="form__item">
-    <label class="form__label">Телефон</label>
-    <input type="text" name="phone" class="form__input">						
+  <div class="form__column">
+    <div class="form__row">
+      <div class="form__item ">   
+      <label class="form__label">Имя</label>
+      <input type="text" name="name" class="form__input">						
+    </div>
+    <div class="form__item">
+      <label class="form__label">Телефон</label>
+      <input type="text" name="phone" class="form__input">						
+    </div>
   </div>
+  <div class="form__row">
   <div class="form__item">
     <label class="form__label">Улица</label>
     <input type="text" name="street" class="form__input">						
   </div>
+  </div>
+  <div class="form__row">
   <div class="form__item">
     <label class="form__label">Дом</label>
     <input type="text" name="house" class="form__input">						
@@ -274,11 +279,15 @@
       <input type="text" name="floor" class="form__input">						
   </div>
   </div>
-  <div class="form__right">
+  </div>
+  <div class="form__column">
+      <div class="form__row">
   <div class="form__item">
       <label class="form__label">Комментарий</label> 
-      <textarea rows="10" cols="30" name="comment" class="form__textarea"></textarea>
+      <textarea rows="10" cols="30" name="comment" class="form__input form__input--textarea"></textarea>
   </div>
+  </div>
+  <div class="form__row">
   <label class="form__radio">
       <input type="radio" name="yes" value="radio1" class="form__input-radio">
       <div class="form__circle">
@@ -293,12 +302,14 @@
       </div>
       <span class="form__version">Оплата по карте</span>
     </label>
-  
+  </div>
+  <div class="form__row">
   <div class="form__button">		
     <button class="form__submit">Заказать</button>
   </div>
   <div class="form__button">		
     <button class="form__submit">Очистить</button>
+  </div>
   </div>
   </div>
   </form>

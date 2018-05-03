@@ -8,36 +8,43 @@
 
 .form {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
-  min-height: 265px;
-  color: #fff;
-  font-size: 14px;
-  font-family: "Ubuntu";
+  min-height: 265px;  
 }
 
-.form__left {
+.form__column {
+  width: 49%;
+}
+
+.form__row {
   display: flex;
-  width: 50%;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
+  margin-bottom: 20px;
 }
 
 .form__item {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: flex-start;
+  flex: 1 1 0%;
+  margin-right: 20px;
+  text-align: left;
 }
 
+.form__label {
+  color: #fff;
+  font-size: 14px;
+  font-family: "Ubuntu";
+  margin-bottom: 10px;
+}
 
+.form__input {
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  min-height: 35px;
+  padding-left: 20px;
+  padding-right: 20px; 
+}
 
-
-
-.form__right {
-  display: flex;
-  width: 50%;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
+.form__input--textarea {
+  height: 111px;
+  resize: none;
 }
