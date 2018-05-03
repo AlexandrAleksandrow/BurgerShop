@@ -1,6 +1,7 @@
 .footer {
  display: flex;
  position: absolute;
+ justify-content: space-between;
  width: 100%;
  min-height: 60px;
  bottom: 0;
@@ -9,19 +10,14 @@
 
 .footer__left {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
   color: #fff;
   width: 50%;
   min-height: 60px; 
   font-size: 14px;
   font-family: "Ubuntu";
-  text-align: left;
-}
-
-.footer__adress {
-  display: flex;
-  width: 100%;
+  text-align: left;  
 }
 
 .footer__phone {
@@ -31,20 +27,19 @@
   color: #e45028;
   font-weight: 500;
   text-decoration: none;
-}
 
-.footer__phone:before {
+&:before {
   content: "";
   display: flex;
   width: 12px;
   height: 12px;
   background: url(../../../ifc/phone.png) center center no-repeat;
   margin-right: 10px;
-  }
+}
+}
 
 .footer__right {
   display: flex;
-  flex-wrap: nowrap;
   align-items: center;
   justify-content: flex-end;
   width: 50%;
@@ -53,19 +48,18 @@
 
 .social__list {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
 }
 
 .social__item {
   margin-right: 20px;
-}
 
-.social__item:nth-child(4) {
+  &:nth-child(4) {
   margin-right: 0px;
 }
+}
 
-.social__bg {
+.social__link {
   content: "";
   display: flex;
   justify-content: center;

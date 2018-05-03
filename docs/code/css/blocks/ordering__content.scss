@@ -1,0 +1,43 @@
+.ordering {
+  text-align: center;
+}
+
+.ordering__caption {
+  padding-top: 120px;
+}
+
+.form {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  min-height: 265px;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Ubuntu";
+}
+
+.form__left {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.form__item {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+}
+
+
+
+
+
+.form__right {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
