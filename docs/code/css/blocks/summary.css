@@ -1,8 +1,3 @@
 .summary {
-	position: relative;
-	background: url(../../../ifc/bg.jpg) center center no-repeat #80898e;
-	width: 100%;
-	height: 100vh;
-	min-height: 650px; 
-	background-size: cover;
+	background: url(../../../ifc/bg.jpg) center center/cover no-repeat;
 }

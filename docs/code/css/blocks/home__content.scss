@@ -1,0 +1,41 @@
+.home__container {
+	display: flex;
+	flex: .7;
+	justify-content: center;
+	align-items: center;
+}
+
+.home__content {
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+}
+
+.home__img {
+	max-width: 95%;
+}
+
+.home__content-text {
+  text-align: left;
+}
+
+.home__content-decs {
+	font-family: lifehack;
+  font-size: 63px;
+  line-height: .9;
+	color: #fff;
+}
+
+.home__caption {
+  
+}
+
+.home_scroll {
+	position: absolute;
+	top: 85%;
+	left: 50%;
+}
+
+
+
+

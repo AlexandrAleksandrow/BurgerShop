@@ -1,10 +1,15 @@
+/*style*/
+/*layout*/
 @import url(/layout/normalize.css);
 @import url(./layout/base.css);
 @import url(./layout/fonts.css);
+/*blocks*/
 @import url(./blocks/home.css);
 @import url(./blocks/header.css);
+@import url(./blocks/button.css);
 @import url(./blocks/sidebar.css);
-@import url(./blocks/signboard.css);
+@import url(./blocks/home__content.css);
+@import url(./blocks/caption.css);
 @import url(./blocks/summary.css);
 @import url(./blocks/summary_caption.css);
 @import url(./blocks/summary_list.css);
@@ -18,3 +23,5 @@
 @import url(./blocks/footer.css);
 @import url(./blocks/ordering.css);
 @import url(./blocks/ordering__content.css);
+
+/*# sourceMappingURL=main.css.map */

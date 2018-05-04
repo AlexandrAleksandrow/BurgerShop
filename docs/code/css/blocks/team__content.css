@@ -20,58 +20,68 @@
 .accordion__item:last-child {
   margin-bottom: 0px; }
 
-.accordion__title {
-  font-size: 14px;
-  font-family: "Gagalin";
-  font-weight: 500;
-  margin-bottom: 20px;
-  width: 50%;
-  cursor: pointer; }
-  .accordion__title:hover {
-    color: #dfa43b; }
-  .accordion__title:hover + .accordion__content {
-    height: 100px; }
-  .accordion__title:before {
-    content: "";
-    display: block;
-    float: left;
-    margin-right: 10px;
-    margin-top: 4px;
-    border-top: 0px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid #dfa43b;
-    border-left: 10px solid transparent; }
-  .accordion__title:hover:before {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
-    -webkit-transition: .5s;
-    -o-transition: .5s;
-    transition: .5s; }
-
-.accordion__content {
-  height: 0;
+.accordion__item--active .accordion__content {
+  height: 100px;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
-  z-index: 10; }
+  align-items: center; }
 
-/*.accordion__content--active {
-  height: 100px;
-  overflow: hidden;
+.accordion__item--active .accordion__trigger {
+  color: #dfa43b; }
+
+.accordion__item--active .accordion__trigger:before {
+  border-top: 10px solid #dfa43b;
+  border-bottom: 0px solid transparent; }
+
+.accordion__trigger {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-}*/
+  font-size: 14px;
+  font-family: "Gagalin";
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 20px; }
+  .accordion__trigger:before {
+    content: "";
+    display: block;
+    float: left;
+    margin-right: 10px;
+    border-top: 0px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #dfa43b;
+    border-left: 10px solid transparent; }
+
+.accordion__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 0;
+  overflow: hidden;
+  font-size: 14px;
+  font-family: "Ubuntu"; }
+
 .accordion__img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
   margin-right: 20px;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
-  border-radius: 50%; }
+  overflow: hidden;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100px; }
 
 .accordion__position {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  font-weight: bold; }

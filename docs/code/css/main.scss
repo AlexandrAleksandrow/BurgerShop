@@ -1,10 +1,16 @@
+/*style*/
+/*layout*/
 @import "/layout/normalize.css";
 @import "./layout/base.css";
 @import "./layout/fonts.css";
+
+/*blocks*/
 @import "./blocks/home.css";
 @import "./blocks/header.css";
+@import "./blocks/button.css";
 @import "./blocks/sidebar.css";
-@import "./blocks/signboard.css";
+@import "./blocks/home__content.css";
+@import "./blocks/caption.css";
 @import "./blocks/summary.css";
 @import "./blocks/summary_caption.css";
 @import "./blocks/summary_list.css";
