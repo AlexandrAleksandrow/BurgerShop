@@ -1,36 +1,72 @@
 .menu__caption {
-  display: inline-block;
+  position: absolute;
+  top: 12%;
+  left: 10%;
   color: #fff;
-  padding-top: 110px;
-  padding-left: 90px;
 }
 
-.menu_block {
+.menu__accordion {
+  display: flex;
   position: absolute;
-  width: 100vh;
-  transform-origin: left bottom;
-  transform: translateX(100%) rotate(-90deg);
+  top: 0;
   right: 0;
   bottom: 0;
 }
 
-.menu__acordion-title {
+.menu__accordion-item {
   display: flex;
-  align-items: center;
-  height: 80px;
-  padding-left: 40px;
+}
+
+.menu__accordion-item--active {
+  .menu__accordion-text {
+    padding: 9.23% 5.55%;
+    width: 540px;
+    background: #373739;
+    opacity: .9;
+  }
+  .menu__accordion-title {
+    color: #f9b43b;
+  }
+}
+
+.menu__accordion-caption {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 80px;
+  text-decoration: none;
+  padding-bottom: 150px; /*непонятно почему но текст уползает вниз блока?!?!?!*/
+}
+
+.menu__accordion-caption-v1 {
+  background: url(../../../ifc/v1.jpg) center center/cover no-repeat;
+}
+
+.menu__accordion-caption-v2 {
+  background: url(../../../ifc/v2.jpg) center center/cover no-repeat;
+}
+
+.menu__accordion-caption-v3 {
+  background: url(../../../ifc/v3.jpg) center center/cover no-repeat;
+}
+
+.menu__accordion-title {
+  transform: rotate(-90deg);
   text-transform: uppercase;
   font-size: 40px;
   font-family: "Gagalin";
   font-weight: 500;
+  color: #fff;
+  white-space: nowrap;
+  
 }
 
 .menu__accordion-text {
-  position: absolute;
-  height: 100vh;
-  width: 540px;
-  transform-origin: left bottom;
-  transform: translateX(100%) rotate(90deg);
-  right: 0;
-  bottom: 0;
+  font-size: 14px;
+  font-family: "Ubuntu";
+  color: #fff;
+  text-align: justify;
+  padding: 0;/*9.23% 5.55%*/
+  width: 0;
 }
+
