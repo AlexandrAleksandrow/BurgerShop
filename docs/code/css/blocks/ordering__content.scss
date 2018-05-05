@@ -1,9 +1,7 @@
-.ordering {
-  text-align: center;
-}
 
 .ordering__caption {
-  padding-top: 120px;
+  margin-top: 120px;
+  text-align: center;
 }
 
 .form {
@@ -22,10 +20,18 @@
   margin-bottom: 20px;
 }
 
+.form__row--margin {
+  margin-bottom: 8px;
+}
+
 .form__item {
   flex: 1 1 0%;
   margin-right: 20px;
   text-align: left;
+
+  &:last-child {
+    margin-right: 0px;
+  }
 }
 
 .form__label {
@@ -44,7 +50,71 @@
   padding-right: 20px; 
 }
 
-.form__input--textarea {
+.form__input-textarea {
   height: 111px;
   resize: none;
+}
+
+.form__radio {
+  display: flex;
+  margin-right: 20px;
+}
+
+.form__input-radio {
+  position: absolute;
+	left: -99999px;
+
+  &:checked + .form__circle .form__inner {
+   background-color: #e35028;
+  }
+}
+
+.form__circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 10px;
+}
+
+.form__inner {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.form__checkbox {
+  display: flex;  
+}
+
+.form__checkbox--invisible {
+  position: absolute;
+  left: -99999px;
+  
+  &:checked + .form__checkbox--visible .check__img {
+    opacity: 1;
+  }
+}
+
+.form__checkbox--visible {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  margin-right: 10px;
+  width: 15px;
+  height: 15px;
+}
+
+.check__img {
+  opacity: 0;
+}
+
+.form__submit {
+  background-color: transparent;
+  border-color: transparent;
 }

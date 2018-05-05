@@ -138,9 +138,9 @@
   </section>
 
   <section class="section reviews">
-    <div class="reviews__container">
+    <div class="reviews__container"> 
     <ul class="reviews__list">
-      <li class="reviews__item reviews__item-f1">
+      <li class="reviews__item" style="background-image: url(./ifc/faces/f1.jpg)">
         <div class="reviews__content">
           <div class="reviews__name">константин спилберг</div>
           <div class="reviews__text">Мысли всё о них и о них. 
@@ -150,7 +150,7 @@
           <a href="#" class="button reviews__button">подробнее</a>          
         </div> 
       </li>
-      <li class="reviews__item reviews__item-f2">
+      <li class="reviews__item" style="background-image: url(./ifc/faces/f2.jpg)">
           <div class="reviews__content">
               
               <div class="reviews__name">константин спилберг</div>
@@ -161,7 +161,7 @@
                 <a href="#" class="button reviews__button">подробнее</a>
             </div>
       </li>
-      <li class="reviews__item reviews__item-f3">
+      <li class="reviews__item" style="background-image: url(./ifc/faces/f3.jpg)">
           <div class="reviews__content">
               <div class="reviews__name">константин спилберг</div>
               <div class="reviews__text">Мысли всё о них и о них. 
@@ -171,7 +171,7 @@
                 <a href="#" class="button reviews__button">подробнее</a>
             </div>
       </li>
-      <li class="reviews__item reviews__item-f4">
+      <li class="reviews__item" style="background-image: url(./ifc/faces/f4.jpg)">
           <div class="reviews__content">
               <div class="reviews__name">константин спилберг</div>
               <div class="reviews__text">Мысли всё о них и о них. 
@@ -181,7 +181,7 @@
                 <a href="#" class="button reviews__button">подробнее</a>
             </div>
       </li>
-      <li class="reviews__item reviews__item-f5">
+      <li class="reviews__item" style="background-image: url(./ifc/faces/f5.jpg)">
           <div class="reviews__content">
               <div class="reviews__name">константин спилберг</div>
               <div class="reviews__text">Мысли всё о них и о них. 
@@ -191,7 +191,7 @@
                 <a href="#" class="button reviews__button">подробнее</a>
             </div>
       </li>
-      <li class="reviews__item reviews__item-f6">
+      <li class="reviews__item" style="background-image: url(./ifc/faces/f6.jpg)">
           <div class="reviews__content">
               <div class="reviews__name">константин спилберг</div>
               <div class="reviews__text">Мысли всё о них и о них. 
@@ -201,7 +201,7 @@
                 <a href="#" class="button reviews__button">подробнее</a>
             </div>
       </li>
-      <li class="reviews__item reviews__item-f7">
+      <li class="reviews__item" style="background-image: url(./ifc/faces/f7.jpg)">
           <div class="reviews__content">
               <div class="reviews__name">константин спилберг</div>
               <div class="reviews__text">Мысли всё о них и о них. 
@@ -211,7 +211,7 @@
                 <a href="#" class="button reviews__button">подробнее</a>
             </div>
       </li>
-      <li class="reviews__item reviews__item-f8">
+      <li class="reviews__item" style="background-image: url(./ifc/faces/f8.jpg)">
           <div class="reviews__content">
               <div class="reviews__name">константин спилберг</div>
               <div class="reviews__text">Мысли всё о них и о них. 
@@ -226,7 +226,7 @@
   </section>
 
   <section class="section ordering">
-  <div class="ordering container">
+  <div class="container">
   <div class="ordering__caption caption">закажите доставку</div>
   <form method="get" name="form" class="form">
   <div class="form__column">
@@ -266,34 +266,43 @@
   </div>
   </div>
   <div class="form__column">
-      <div class="form__row">
-  <div class="form__item">
+    <div class="form__row">
+      <div class="form__item">
       <label class="form__label">Комментарий</label> 
-      <textarea rows="10" cols="30" name="comment" class="form__input form__input--textarea"></textarea>
+      <textarea rows="10" cols="30" name="comment" class="form__input form__input-textarea"></textarea>
+      </div>
   </div>
-  </div>
-  <div class="form__row">
+  <div class="form__buttons">
+  <div class="form__row form__row--margin">
   <label class="form__radio">
       <input type="radio" name="yes" value="radio1" class="form__input-radio">
       <div class="form__circle">
         <div class="form__inner"></div>
       </div>
-      <span class="form__version">Потребутся сдача</span>
+      <span class="form__label">Потребутся сдача</span>
     </label>    
     <label class="form__radio">
       <input type="radio" name="yes" value="radio1" class="form__input-radio">
       <div class="form__circle">
         <div class="form__inner"></div>
       </div>
-      <span class="form__version">Оплата по карте</span>
+      <span class="form__label">Оплата по карте</span>
     </label>
+  </div>
+  <div class="form_row">
+    <label class="form__checkbox">
+      <input type="checkbox" class="form__checkbox--invisible" name="callback">
+      <div class="form__checkbox--visible"><img src="./ifc/check.png" alt="check" class="check__img"></div>
+      <span class="form__label">Не перезванивать</span>
+    </labe>
   </div>
   <div class="form__row">
   <div class="form__button">		
-    <button class="form__submit">Заказать</button>
+    <a href="#" class="form__submit button">Заказать</a>
   </div>
   <div class="form__button">		
-    <button class="form__submit">Очистить</button>
+    <a href="#" class="form__submit button">Очистить</a>
+  </div>
   </div>
   </div>
   </div>
@@ -302,7 +311,7 @@
   </section>
 
   <section class="section contact">
-    <div class="footer container">
+    <div class="footer container__footer">
      <div class="footer__left">
        <div class="footer__adress">Санкт-Петербург, ул. Бабушкина, д.12/1</div>
        <a href="tel:+78123132488" class="footer__phone">8(812)313-24-88</a>
