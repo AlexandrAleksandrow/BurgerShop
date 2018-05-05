@@ -17,7 +17,8 @@
 .menu__accordion-item {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  height: 100%; }
 
 .menu__accordion-item--active .menu__accordion-text {
   padding: 9.23% 5.55%;
@@ -29,19 +30,12 @@
   color: #f9b43b; }
 
 .menu__accordion-caption {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  display: block;
+  position: relative;
   width: 80px;
+  height: 100%;
   text-decoration: none;
-  padding-bottom: 150px;
-  /*непонятно почему но текст уползает вниз блока?!?!?!*/ }
+  /*padding-bottom: 150px; /*непонятно почему но текст уползает вниз блока?!?!?!*/ }
 
 .menu__accordion-caption-v1 {
   background: url(../../../ifc/v1.jpg) center center/cover no-repeat; }
@@ -53,15 +47,22 @@
   background: url(../../../ifc/v3.jpg) center center/cover no-repeat; }
 
 .menu__accordion-title {
-  -webkit-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  transform: rotate(-90deg);
+  position: absolute;
+  left: 90%;
+  top: 100%;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: rotate(-90deg) translateY(-100%);
+  -ms-transform: rotate(-90deg) translateY(-100%);
+  transform: rotate(-90deg) translateY(-100%);
   text-transform: uppercase;
+  white-space: nowrap;
   font-size: 40px;
   font-family: "Gagalin";
   font-weight: 500;
   color: #fff;
-  white-space: nowrap; }
+  margin-top: -20px; }
 
 .menu__accordion-text {
   font-size: 14px;

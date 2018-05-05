@@ -15,6 +15,7 @@
 
 .menu__accordion-item {
   display: flex;
+  height: 100%;
 }
 
 .menu__accordion-item--active {
@@ -30,12 +31,12 @@
 }
 
 .menu__accordion-caption {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  display: block;
+  position: relative;
   width: 80px;
+  height: 100%;
   text-decoration: none;
-  padding-bottom: 150px; /*непонятно почему но текст уползает вниз блока?!?!?!*/
+  /*padding-bottom: 150px; /*непонятно почему но текст уползает вниз блока?!?!?!*/
 }
 
 .menu__accordion-caption-v1 {
@@ -51,14 +52,18 @@
 }
 
 .menu__accordion-title {
-  transform: rotate(-90deg);
+  position: absolute;
+  left: 90%;
+  top: 100%;
+  transform-origin: 0 0;
+  transform: rotate(-90deg) translateY(-100%);
   text-transform: uppercase;
+  white-space: nowrap;
   font-size: 40px;
   font-family: "Gagalin";
   font-weight: 500;
   color: #fff;
-  white-space: nowrap;
-  
+  margin-top: -20px;  
 }
 
 .menu__accordion-text {
