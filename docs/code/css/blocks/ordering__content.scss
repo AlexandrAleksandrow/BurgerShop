@@ -1,6 +1,6 @@
 
 .ordering__caption {
-  margin-top: 120px;
+  margin-top: rem(120px);
   text-align: center;
 }
 
@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  min-height: 265px;  
+  min-height: rem(265px);  
 }
 
 .form__column {
@@ -17,52 +17,52 @@
 
 .form__row {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
 }
 
 .form__row--margin {
-  margin-bottom: 8px;
+  margin-bottom: rem(8px);
 }
 
 .form__item {
   flex: 1 1 0%;
-  margin-right: 20px;
+  margin-right: rem(20px);
   text-align: left;
 
   &:last-child {
-    margin-right: 0px;
+    margin-right: rem(0px);
   }
 }
 
 .form__label {
   color: #fff;
-  font-size: 14px;
+  font-size: rem(14px);
   font-family: "Ubuntu";
-  margin-bottom: 10px;
+  margin-bottom: rem(10px);
 }
 
 .form__input {
   width: 100%;
   border: 1px solid transparent;
   border-radius: 4px;
-  min-height: 35px;
-  padding-left: 20px;
-  padding-right: 20px; 
+  min-height: rem(35px);
+  padding-left: rem(20px);
+  padding-right: rem(20px); 
 }
 
 .form__input-textarea {
-  height: 111px;
+  height: rem(111px);
   resize: none;
 }
 
 .form__radio {
   display: flex;
-  margin-right: 20px;
+  margin-right: rem(20px);
 }
 
 .form__input-radio {
   position: absolute;
-	left: -99999px;
+	left: rem(-99999px);
 
   &:checked + .form__circle .form__inner {
    background-color: #e35028;
@@ -73,16 +73,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 15px;
-  height: 15px;
+  width: rem(15px);
+  height: rem(15px);
   border-radius: 50%;
   background-color: #fff;
-  margin-right: 10px;
+  margin-right: rem(10px);
 }
 
 .form__inner {
-  width: 7px;
-  height: 7px;
+  width: rem(7px);
+  height: rem(7px);
   border-radius: 50%;
   background-color: transparent;
 }
@@ -93,7 +93,7 @@
 
 .form__checkbox--invisible {
   position: absolute;
-  left: -99999px;
+  left: rem(-99999px);
   
   &:checked + .form__checkbox--visible .check__img {
     opacity: 1;
@@ -105,9 +105,9 @@
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  margin-right: 10px;
-  width: 15px;
-  height: 15px;
+  margin-right: rem(10px);
+  width: rem(15px);
+  height: rem(15px);
 }
 
 .check__img {

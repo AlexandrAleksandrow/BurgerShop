@@ -38,16 +38,16 @@
 
 .reviews__name {
   font-family: "Gagalin";
-  font-size: 14px;
+  font-size: rem(14px);
   text-align: left;
   font-weight: 500;
-  margin-bottom: 30px;
+  margin-bottom: rem(30px);
   letter-spacing: 1.2px;
 }
 
 .reviews__text {
   line-height: 1.8;
-  margin-bottom: 17px;
+  margin-bottom: rem(17px);
 }
 
 .reviews__button {

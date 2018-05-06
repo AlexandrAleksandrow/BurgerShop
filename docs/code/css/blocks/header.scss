@@ -1,18 +1,18 @@
 .header {
   display: flex;
-  /*justify-content: space-between;*/
+  justify-content: space-between;
   align-items: center;
-  min-height: 84px;
+  min-height: rem(84px);
   font-family: "ubuntu";
-  font-size: 13px;
+  font-size: rem(13px);
   font-weight: 500;
-  padding-top: 12px;
+  padding-top: rem(12px);
 }
 
 .header__logo {
   display: flex;
-  width: 92px;
-  height: 69px;
+  width: rem(92px);
+  height: rem(69px);
 }
 
 .nav {
@@ -20,7 +20,11 @@
   margin-left: auto; 
 
   &:nth-child(6) {
-    padding-right: 0px;
+    padding-right: rem(0px);
+  }
+
+  @include tab {
+    display: none;
   }
 }
   
@@ -35,17 +39,17 @@
   &:after {
     content: "";
     display: block;
-    width: 4px;
-    height: 4px;
+    width: rem(4px);
+    height: rem(4px);
     border-radius: 50%;
     background: #fff;
-    margin: 0px 14px;
+    margin: rem(0px) rem(14px);
     
   }
   &:nth-child(6):after {
-    width: 0px;
-    height: 0px;
-    margin-right: 0px;
+    width: rem(0px);
+    height: rem(0px);
+    margin-right: rem(0px);
   }
 }
 

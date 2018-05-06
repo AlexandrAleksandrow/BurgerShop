@@ -10,18 +10,18 @@
 }
 
 .summary__pic {
-	padding-bottom: 25px;
+	padding-bottom: rem(25px);
 }
 
 .summary__subtitle {
 	font-family: lifehack;
-	font-size: 24px;
-	padding-bottom: 5px;	 
+	font-size: rem(24px);
+	padding-bottom: rem(5px);	 
 }
 
 .summary__text {
 	font-family: "ubuntu";
-	font-size: 14px;
+	font-size: rem(14px);
 	font-weight: 400;
 	color: #838281;
 	line-height: 1.9;
