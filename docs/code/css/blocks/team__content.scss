@@ -1,13 +1,21 @@
 .team__content {
   position: absolute;
-  left: 51%;
-  width: 49%;
-  height: 100%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 50%;
   background: #303234;
   opacity: .9;
   color: #fff;
-  padding-top: rem(110px);
-  padding-left: rem(95px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @include tab {
+    left: 0;
+    text-align: center;
+  }
 }
 
 .team_caption {
@@ -18,10 +26,10 @@
   margin-bottom: rem(30px);
   width: 90%;
   margin-right: rem(0px);
-}
 
-.accordion__item:last-child {
-  margin-bottom: rem(0px);
+  &:last-child {
+   margin-bottom: rem(0px);
+  }
 }
 
 .accordion__item--active {
@@ -31,6 +39,13 @@
     overflow: hidden;
     display: flex;
     align-items: center;
+
+    @include tab {
+      flex-direction: column;
+      height: rem(200px);
+      justify-content: center;
+    }
+
   }
 
   .accordion__trigger {
@@ -44,7 +59,7 @@
 }
 
 .accordion__trigger {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   font-size: rem(14px);
   font-family: "Gagalin";
@@ -56,13 +71,13 @@
   &:before {
   content: "";
   display: block;
-  float: left;
+ /* float: left;*/
   margin-right: rem(10px);
   border-top: rem(0px) solid transparent;
 	border-right: rem(10px) solid transparent;
 	border-bottom: rem(10px) solid #dfa43b;
 	border-left: rem(10px) solid transparent;
-  }  
+  } 
 }
 
 .accordion__content {
@@ -72,7 +87,7 @@
   overflow: hidden;
   font-size: rem(14px);
   font-family: "Ubuntu";
-  }
+}
 
 .accordion__img {
   width: rem(100px);
@@ -82,6 +97,10 @@
   overflow: hidden;
   flex-basis: 100%;
   max-width: rem(100px);
+
+  @include tab {
+    margin-right: rem(0px);
+  }
 }
 
 .accordion__position {

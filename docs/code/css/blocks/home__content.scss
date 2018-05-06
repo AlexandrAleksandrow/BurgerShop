@@ -9,6 +9,10 @@
 	display: flex;
 	justify-content: center;
 	align-items: center; 
+
+		@include tab {
+    flex-direction: column;
+  }
 }
 
 .home__img {
@@ -16,7 +20,11 @@
 }
 
 .home__content-text {
-  text-align: left;
+	text-align: left;
+	
+	@include tab {
+    text-align: center;
+  }
 }
 
 .home__content-decs {

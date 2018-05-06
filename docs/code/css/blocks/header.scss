@@ -17,7 +17,7 @@
 
 .nav {
   display: flex;
-  margin-left: auto; 
+  margin-left: auto;  
 
   &:nth-child(6) {
     padding-right: rem(0px);
@@ -64,3 +64,11 @@
     text-decoration: underline;
    }
 }
+
+.button__header {
+  @include tab {
+    margin-left: auto;
+  }
+}
+
+
