@@ -3,6 +3,10 @@
 	position: fixed;
 	top: 15%;
 	right: 3%;
+
+	@include tab {
+		display: none;
+	  }
 }
 
 .sidebar__link {
@@ -10,8 +14,8 @@
 }
 
 .sidebar__circle {
-	width: 16px;
-	height: 16px;
+	width: rem(16px);
+	height: rem(16px);
 	display: inline-block;
 	border: 1px solid transparent;
     border-radius: 50%;
@@ -24,8 +28,8 @@
     bottom: 50%;
     right: 50%;
     transform: translate(50%, 50%);
-    width: 6px;
-    height: 6px;
+    width: rem(6px);
+    height: rem(6px);
     border-radius: 50%;
     background: #fff;
 }
