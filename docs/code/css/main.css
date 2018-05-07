@@ -319,15 +319,40 @@ p {
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column; } }
+  @media screen and (max-width: 480px) {
+    .home__content {
+      padding: 0% 0%; } }
+
+.home__content-pic {
+  width: 50%; }
+  @media screen and (max-width: 768px) {
+    .home__content-pic {
+      text-align: center;
+      width: 80%; } }
+  @media screen and (max-width: 480px) {
+    .home__content-pic {
+      text-align: center;
+      width: 100%;
+      padding: 0 10%; } }
 
 .home__img {
   max-width: 95%; }
 
 .home__content-text {
-  text-align: left; }
+  text-align: left;
+  width: 50%; }
   @media screen and (max-width: 768px) {
     .home__content-text {
-      text-align: center; } }
+      text-align: center;
+      width: 80%; } }
+  @media screen and (max-width: 480px) {
+    .home__content-text {
+      text-align: center;
+      width: 100%; } }
+
+@media screen and (max-width: 480px) {
+  .home__caption {
+    font-size: 3.9375rem; } }
 
 .home__content-decs {
   font-family: lifehack;
@@ -354,6 +379,10 @@ p {
   margin-top: 6.875rem;
   margin-bottom: 2.1875rem; }
 
+@media screen and (max-width: 480px) {
+  .summary__caption {
+    font-size: 3.125rem; } }
+
 .summary__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -363,15 +392,39 @@ p {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start; }
+  @media screen and (max-width: 480px) {
+    .summary__list {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
+
+@media screen and (max-width: 480px) {
+  .summary__item-content {
+    text-align: left;
+    margin-left: 10%; } }
 
 .summary__item {
   text-align: center;
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1; }
+  @media screen and (max-width: 480px) {
+    .summary__item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      margin-bottom: 30px; } }
 
 .summary__pic {
   padding-bottom: 1.5625rem; }
+
+.summary__img {
+  width: 5.625rem;
+  height: 5.625rem; }
 
 .summary__subtitle {
   font-family: lifehack;
@@ -385,6 +438,9 @@ p {
   color: #838281;
   line-height: 1.9;
   text-align: center; }
+  @media screen and (max-width: 480px) {
+    .summary__text {
+      text-align: left; } }
 
 .reviews__container {
   padding-right: 0;
@@ -437,6 +493,11 @@ p {
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s; }
+  @media screen and (max-width: 480px) {
+    .reviews__content {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
 
 .reviews__name {
   font-family: "Gagalin";
@@ -456,6 +517,9 @@ p {
     .reviews__text {
       line-height: 1.2;
       text-align: center; } }
+  @media screen and (max-width: 480px) {
+    .reviews__text {
+      display: none; } }
 
 .reviews__button {
   background: #2f3234;
@@ -596,6 +660,9 @@ p {
   top: 12%;
   left: 10%;
   color: #fff; }
+  @media screen and (max-width: 480px) {
+    .menu__caption {
+      display: none; } }
 
 .menu__accordion {
   display: -webkit-box;
@@ -621,13 +688,16 @@ p {
 .menu__accordion-item--active .menu__accordion-title {
   color: #f9b43b; }
 
+@media screen and (max-width: 480px) {
+  .menu__accordion-item--active {
+    width: 15.625rem; } }
+
 .menu__accordion-caption {
   display: block;
   position: relative;
   width: 5rem;
   height: 100%;
-  text-decoration: none;
-  /*padding-bottom: rem(150px); /*непонятно почему но текст уползает вниз блока?!?!?!*/ }
+  text-decoration: none; }
 
 .menu__accordion-caption-v1 {
   background: url(../../ifc/v1.jpg) center center/cover no-repeat; }
@@ -677,6 +747,15 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  @media screen and (max-width: 480px) {
+    .container__footer {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .footer {
   display: -webkit-box;
@@ -708,6 +787,12 @@ p {
   font-size: 0.875rem;
   font-family: "Ubuntu";
   text-align: left; }
+  @media screen and (max-width: 480px) {
+    .footer__left {
+      width: 100%;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .footer__phone {
   display: -webkit-box;
@@ -743,6 +828,15 @@ p {
   justify-content: flex-end;
   width: 50%;
   min-height: 3.75rem; }
+  @media screen and (max-width: 480px) {
+    .footer__right {
+      width: 100%;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
 
 .social__list {
   display: -webkit-box;
@@ -826,6 +920,9 @@ p {
 .ordering__caption {
   margin-top: 7.5rem;
   text-align: center; }
+  @media screen and (max-width: 480px) {
+    .ordering__caption {
+      font-size: 3.125rem; } }
 
 .form {
   display: -webkit-box;
@@ -951,5 +1048,19 @@ p {
 .form__submit {
   background-color: transparent;
   border-color: transparent; }
+
+.Закажите_доставку {
+  font-size: 49.761px;
+  font-family: "Gagalin";
+  color: #f9b43b;
+  line-height: 1.2;
+  text-align: center;
+  -moz-transform: matrix(0.99971, 0, 0, 1.00658, 0, 0);
+  -webkit-transform: matrix(0.99971, 0, 0, 1.00658, 0, 0);
+  -ms-transform: matrix(0.99971, 0, 0, 1.00658, 0, 0);
+  position: absolute;
+  left: 123.034px;
+  top: 4914.942px;
+  z-index: 26; }
 
 /*# sourceMappingURL=main.css.map */

@@ -5,6 +5,11 @@
   min-height: rem(60px);
   padding: rem(0px) rem(80px);
   display: flex;
+
+  @include phon {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 
@@ -15,7 +20,7 @@
  width: 100%;
  min-height: rem(60px);
  bottom: 0;
- background: url(../../ifc/footerbg.png)
+ background: url(../../ifc/footerbg.png) 
 }
 
 .footer__left {
@@ -27,7 +32,12 @@
   min-height: rem(60px); 
   font-size: rem(14px);
   font-family: "Ubuntu";
-  text-align: left;  
+  text-align: left; 
+  
+  @include phon {
+    width: 100%;
+    align-items: center;
+  }
 }
 
 .footer__phone {
@@ -38,14 +48,14 @@
   font-weight: 500;
   text-decoration: none;
 
-&:before {
-  content: "";
-  display: flex;
-  width: rem(12px);
-  height: rem(12px);
-  background: url(../../ifc/phone.png) center center no-repeat;
-  margin-right: rem(10px);
-}
+  &:before {
+    content: "";
+    display: flex;
+    width: rem(12px);
+    height: rem(12px);
+    background: url(../../ifc/phone.png) center center no-repeat;
+    margin-right: rem(10px);
+  }
 }
 
 .footer__right {
@@ -54,6 +64,12 @@
   justify-content: flex-end;
   width: 50%;
   min-height: rem(60px);
+
+  @include phon {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .social__list {

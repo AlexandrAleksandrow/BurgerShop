@@ -3,6 +3,10 @@
   top: 12%;
   left: 10%;
   color: #fff;
+
+  @include phon {
+		display: none;
+  }
 }
 
 .menu__accordion {
@@ -27,7 +31,11 @@
   }
   .menu__accordion-title {
     color: #f9b43b;
-  }  
+  } 
+  
+  @include phon {
+		width: rem(250px);
+  }
 }
 
 .menu__accordion-caption {
@@ -35,8 +43,7 @@
   position: relative;
   width: rem(80px);
   height: 100%;
-  text-decoration: none;
-  /*padding-bottom: rem(150px); /*непонятно почему но текст уползает вниз блока?!?!?!*/
+  text-decoration: none;  
 }
 
 .menu__accordion-caption-v1 {
@@ -74,4 +81,3 @@
   padding: 0;/*9.23% 5.55%*/
   width: 0;
 }
-
