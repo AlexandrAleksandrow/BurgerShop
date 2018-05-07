@@ -68,7 +68,8 @@
   margin-bottom: rem(17px);
 
   @include tab {
-    line-height: 1.2;
+    line-height: 1.1;
+    font-size: rem(14px);
     text-align: center;
   }
 
