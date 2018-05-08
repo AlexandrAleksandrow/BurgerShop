@@ -7,8 +7,14 @@
   margin-top: rem(120px);
   text-align: center;
 
+  @include tab {
+    flex-direction: column;
+    font-size: rem(64px);
+  }
+
   @include phon {
-		font-size: rem(50px);
+    font-size: rem(50px);
+    margin-top: rem(80px);
   }
 }
 
