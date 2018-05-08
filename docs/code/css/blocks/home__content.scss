@@ -55,8 +55,11 @@
 }
 
 .home__caption {
+  white-space: nowrap;
+
 	@include phon {
 		font-size: rem(63px);
+		
 	}
 }
 

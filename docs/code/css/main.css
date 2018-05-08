@@ -350,9 +350,11 @@ p {
       text-align: center;
       width: 100%; } }
 
-@media screen and (max-width: 480px) {
-  .home__caption {
-    font-size: 3.9375rem; } }
+.home__caption {
+  white-space: nowrap; }
+  @media screen and (max-width: 480px) {
+    .home__caption {
+      font-size: 3.9375rem; } }
 
 .home__content-decs {
   font-family: lifehack;
@@ -515,7 +517,8 @@ p {
   margin-bottom: 1.0625rem; }
   @media screen and (max-width: 768px) {
     .reviews__text {
-      line-height: 1.2;
+      line-height: 1.1;
+      font-size: 0.875rem;
       text-align: center; } }
   @media screen and (max-width: 480px) {
     .reviews__text {
@@ -920,9 +923,17 @@ p {
 .ordering__caption {
   margin-top: 7.5rem;
   text-align: center; }
+  @media screen and (max-width: 768px) {
+    .ordering__caption {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      font-size: 4rem; } }
   @media screen and (max-width: 480px) {
     .ordering__caption {
-      font-size: 3.125rem; } }
+      font-size: 3.125rem;
+      margin-top: 5rem; } }
 
 .form {
   display: -webkit-box;
@@ -1062,5 +1073,3 @@ p {
   left: 123.034px;
   top: 4914.942px;
   z-index: 26; }
-
-/*# sourceMappingURL=main.css.map */
