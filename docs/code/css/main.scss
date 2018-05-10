@@ -9,13 +9,15 @@ $phones: 480px;
 
 
 /*style*/
+@import "./layout/normalize.scss";
+
 /*media*/
 @import "./layout/media.scss";
 
 /*layout*/
-@import "/layout/normalize.css";
-@import "./layout/base.scss";
 @import "./layout/fonts.scss";
+@import "./layout/base.scss";
+
 
 
 
