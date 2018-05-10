@@ -40,13 +40,14 @@
 	width: rem(90px);
 	height: rem(90px);
 }
-.summary__subtitle {
+.summary__item-content h4 {
 	font-family: lifehack;
 	font-size: rem(24px);
-	padding-bottom: rem(5px);	 
+	padding-bottom: rem(5px);	
+	margin: 0; 
 }
 
-.summary__text {
+.summary__item-content p {
 	font-family: "ubuntu";
 	font-size: rem(14px);
 	font-weight: 400;
