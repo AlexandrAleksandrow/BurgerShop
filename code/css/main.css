@@ -756,6 +756,12 @@ p {
     .summary__item-content p {
       text-align: left; } }
 
+.burger {
+  background: -webkit-gradient(linear, left bottom, left top, from(#f9b43b), color-stop(45%, #eb8c38), color-stop(70%, #f9b43b));
+  background: -webkit-linear-gradient(bottom, #f9b43b 0%, #eb8c38 45%, #f9b43b 70%);
+  background: -o-linear-gradient(bottom, #f9b43b 0%, #eb8c38 45%, #f9b43b 70%);
+  background: linear-gradient(to top, #f9b43b 0%, #eb8c38 45%, #f9b43b 70%); }
+
 .reviews__container {
   padding-right: 0;
   padding-left: 0;
