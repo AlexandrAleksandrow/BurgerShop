@@ -761,7 +761,7 @@ p {
   background: -webkit-linear-gradient(bottom, #f9b43b 0%, #eb8c38 45%, #f9b43b 70%);
   background: -o-linear-gradient(bottom, #f9b43b 0%, #eb8c38 45%, #f9b43b 70%);
   background: linear-gradient(to top, #f9b43b 0%, #eb8c38 45%, #f9b43b 70%);
-  padding-top: 9.375rem; }
+  padding-top: 8.75rem; }
 
 .slider {
   display: -webkit-box;
@@ -770,13 +770,21 @@ p {
 
 .slider__arrow-letf {
   position: absolute;
-  top: 50%;
-  right: 20%; }
+  top: 35%;
+  left: 0rem;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: pointer; }
 
 .slider__arrow-right {
   position: absolute;
-  top: 50%;
-  left: 80%; }
+  top: 35%;
+  right: -1.875rem;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: pointer; }
 
 .slider__item {
   display: -webkit-box;
@@ -786,32 +794,146 @@ p {
   -ms-flex-align: center;
   align-items: center; }
 
+.burger__composition {
+  position: absolute;
+  top: -10%;
+  left: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 5.625rem;
+  height: 5.625rem;
+  background: #f08c33;
+  border-radius: 0.3125rem;
+  font-size: 14px;
+  font-family: "Gagalin";
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer; }
+  .burger__composition:hover {
+    background: #e35028; }
+  .burger__composition:hover + .burger__popup {
+    left: 12.6%; }
+
+.burger__composition-img {
+  margin-bottom: 5px; }
+
+.burger__popup {
+  position: absolute;
+  top: -10%;
+  left: 999%;
+  /*12.6%;*/
+  width: 16.875rem;
+  height: 20.625rem;
+  background: #fff;
+  border-radius: 0.3125rem;
+  padding: 1.25rem; }
+
+.popup__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.popup__pic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 3.125rem;
+  height: 3.125rem; }
+
+.popup__ingredient {
+  margin-left: 1.25rem; }
+
+.popup__weight {
+  margin-left: auto; }
+
+.burger__calories {
+  position: absolute;
+  top: 55%;
+  left: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 5.625rem;
+  height: 5.625rem;
+  background: transparent;
+  border-radius: 0.3125rem;
+  font-size: 0.875rem;
+  font-family: "Gagalin";
+  color: #f9d19d;
+  text-transform: uppercase; }
+
+.burger__calories-img {
+  margin-bottom: 5px; }
+
+.burger_calories-number {
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  font-size: 1rem; }
+
 .burger__caption {
   color: #fff;
-  line-height: 1;
-  margin-bottom: 3.4375rem; }
+  line-height: .9;
+  margin-bottom: 2.5rem; }
 
 .burger__desc {
   font-size: 14px;
   font-family: "ubuntu";
   color: #fff;
-  margin-bottom: 2.1875rem;
+  margin-bottom: 1.25rem;
   line-height: 1.714; }
 
 .burger__price {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .burger__price-text {
-  font-size: 3.125rem;
+  font-size: 4.4375rem;
   font-family: "Gagalin";
   color: #e35028;
   white-space: nowrap;
-  margin-right: 1.875rem; }
+  margin: 0;
+  padding: 0;
+  margin-right: 2.1875rem; }
 
 .burger__price-subtext {
-  font-size: 1.25rem; }
+  font-size: 1.875rem;
+  margin: 0;
+  padding: 0; }
 
 .reviews__container {
   padding-right: 0;

@@ -4,14 +4,87 @@
 
 .slider__arrow-letf {
   position: absolute;
-  top: 50%;
-  right: 20%;
+  top: 35%;
+  left: rem(0px);
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 
 .slider__arrow-right {
   position: absolute;
-  top: 50%;
-  left: 80%;
+  top: 35%;
+  right: rem(-30px);
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.slider__item {
+  display: flex;
+  align-items: center;
+}
+
+.burger__composition {
+  position: absolute;
+  top: -10%;
+  left: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: rem(90px);
+  height: rem(90px);
+  background: #f08c33;
+  border-radius: rem(5px);
+  font-size: 14px;
+  font-family: "Gagalin";
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    background: #e35028;
+  }
+
+  &:hover + .burger__popup {
+     left: 12.6%;
+  }
+  
+}
+
+.burger__composition-img {
+  margin-bottom: 5px;
+}
+
+.burger__popup {
+  position: absolute;
+  top:-10%;
+  left: 999%; /*12.6%;*/ 
+  width: rem(270px);
+  height: rem(330px);
+  background: #fff;
+  border-radius: rem(5px);
+  padding: rem(20px);
+}
+
+.popup__item {
+  display: flex;
+  align-items: center;
+}
+
+.popup__pic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(50px);
+  height: rem(50px);
+}
+
+.popup__ingredient {
+  margin-left: rem(20px);
+}
+
+.popup__weight {
+  margin-left: auto;
 }
 
 
@@ -23,12 +96,33 @@
 
 
 
-
-
-
-.slider__item {
+.burger__calories {
+  position: absolute;
+  top: 55%;
+  left: 3%;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  width: rem(90px);
+  height: rem(90px);
+  background: transparent;
+  border-radius: rem(5px);
+  font-size: rem(14px);
+  font-family: "Gagalin";
+  color: #f9d19d;
+  text-transform: uppercase;
+}
+
+.burger__calories-img {
+  margin-bottom: 5px;
+}
+
+.burger_calories-number {
+ position: absolute;
+ top: 35%;
+ left: 35%; 
+ font-size: rem(16px);
 }
 
 
@@ -36,31 +130,35 @@
 
 .burger__caption {
   color: #fff;
-  line-height: 1;
-  margin-bottom: rem(55px);
+  line-height: .9;
+  margin-bottom: rem(40px);
 }
 
 .burger__desc {
  font-size: 14px;
  font-family: "ubuntu";
  color: #fff;
- margin-bottom: rem(35px);
+ margin-bottom: rem(20px);
  line-height: 1.714;
 }
 
 .burger__price {
   display: flex;
+  align-items: center;
 }
 
 .burger__price-text {
-  font-size: rem(50px);
+  font-size: rem(71px);
   font-family: "Gagalin";
   color: rgb(227, 80, 40);
   white-space: nowrap;
-  margin-right: rem(30px);
+  margin: 0;
+  padding: 0;
+  margin-right: rem(35px);
 }
 
 .burger__price-subtext {
-  font-size: rem(20px);
+  font-size: rem(30px);
+  margin: 0;
+  padding: 0;
 }
-
