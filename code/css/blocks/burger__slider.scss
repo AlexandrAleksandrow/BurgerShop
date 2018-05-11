@@ -1,0 +1,66 @@
+.slider {
+  display: flex;
+}
+
+.slider__arrow-letf {
+  position: absolute;
+  top: 50%;
+  right: 20%;
+}
+
+.slider__arrow-right {
+  position: absolute;
+  top: 50%;
+  left: 80%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.slider__item {
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+.burger__caption {
+  color: #fff;
+  line-height: 1;
+  margin-bottom: rem(55px);
+}
+
+.burger__desc {
+ font-size: 14px;
+ font-family: "ubuntu";
+ color: #fff;
+ margin-bottom: rem(35px);
+ line-height: 1.714;
+}
+
+.burger__price {
+  display: flex;
+}
+
+.burger__price-text {
+  font-size: rem(50px);
+  font-family: "Gagalin";
+  color: rgb(227, 80, 40);
+  white-space: nowrap;
+  margin-right: rem(30px);
+}
+
+.burger__price-subtext {
+  font-size: rem(20px);
+}
+
