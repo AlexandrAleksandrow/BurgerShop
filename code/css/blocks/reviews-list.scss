@@ -61,6 +61,10 @@
   @include tab {
     margin-bottom: rem(20px);
   }
+
+  @include phon {
+		text-align: center;
+  }
 }
 
 .reviews__text {

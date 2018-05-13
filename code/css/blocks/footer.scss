@@ -6,12 +6,15 @@
   padding: rem(0px) rem(80px);
   display: flex;
 
+  @include tab {
+    padding: rem(0px) rem(20px);
+  }
+
   @include phon {
     flex-direction: column;
     align-items: center;
   }
 }
-
 
 .footer {
  display: flex;
@@ -32,12 +35,21 @@
   min-height: rem(60px); 
   font-size: rem(14px);
   font-family: "Ubuntu";
-  text-align: left; 
+  text-align: left;
+  
+  @include tab {
+    width: 40%;
+  }
   
   @include phon {
     width: 100%;
     align-items: center;
+    justify-content: flex-end;
   }
+}
+
+.footer__adress {
+ white-space: nowrap;
 }
 
 .footer__phone {
@@ -64,6 +76,10 @@
   justify-content: flex-end;
   width: 50%;
   min-height: rem(60px);
+
+  @include tab {
+    width: 40%;
+  }
 
   @include phon {
     width: 100%;
