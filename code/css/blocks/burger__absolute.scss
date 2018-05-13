@@ -1,0 +1,127 @@
+.slider__arrow-letf {
+  position: absolute;
+  top: 35%;
+  left: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.slider__arrow-right {
+  position: absolute;
+  top: 35%;
+  right: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.burger__composition {
+  position: absolute;
+  top: -10%;
+  left: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: rem(90px);
+  height: rem(90px);
+  background: #f08c33;
+  border-radius: rem(5px);
+  font-size: 14px;
+  font-family: "Gagalin";
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    background: #e35028;
+  }
+
+  &:hover + .burger__popup {
+     left: 12.6%;
+  }  
+
+  @include tab {
+    width: rem(70px);
+    height: rem(70px);
+	}
+}
+
+
+.burger__composition-img {
+  margin-bottom: 5px;
+}
+
+.burger__popup {
+  position: absolute;
+  top:-10%;
+  left: 999%; /*12.6%;*/ 
+  width: rem(270px);
+  height: rem(330px);
+  background: #fff;
+  border-radius: rem(5px);
+  padding: rem(20px);
+}
+
+.popup__item {
+  display: flex;
+  align-items: center;
+}
+
+.popup__pic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(50px);
+  height: rem(50px);
+}
+
+.popup__ingredient {
+  margin-left: rem(20px);
+}
+
+.popup__weight {
+  margin-left: auto;
+}
+
+.popup__exit {
+  position: absolute;
+  top: 2%;
+  left: 90%;
+}
+
+.burger__calories {
+  position: absolute;
+  top: 55%;
+  left: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: rem(90px);
+  height: rem(90px);
+  background: transparent;
+  border-radius: rem(5px);
+  font-size: rem(14px);
+  font-family: "Gagalin";
+  color: #f9d19d;
+  text-transform: uppercase;
+
+  @include tab {
+    top: -10%; 
+    left: auto;
+    right: 3%;
+    width: rem(70px);
+    height: rem(70px);
+	}
+}
+
+.burger__calories-img {
+  margin-bottom: 5px;
+}
+
+.burger_calories-number {
+ position: absolute;
+ top: 35%;
+ left: 35%; 
+ font-size: rem(16px);
+}
