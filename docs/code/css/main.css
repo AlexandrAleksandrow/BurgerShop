@@ -558,7 +558,7 @@ p {
 .sidebar {
   display: block;
   position: fixed;
-  top: 15%;
+  top: 10%;
   right: 3%;
   z-index: 50; }
   @media screen and (max-width: 768px) {
@@ -566,7 +566,7 @@ p {
       display: none; } }
 
 .sidebar__item {
-  margin-bottom: 10px; }
+  margin-bottom: 5px; }
 
 .sidebar__link {
   display: block;
@@ -661,17 +661,23 @@ p {
       text-align: center;
       width: 100%; } }
 
-.home__caption {
-  white-space: nowrap; }
-  @media screen and (max-width: 480px) {
-    .home__caption {
-      font-size: 3.9375rem; } }
+@media screen and (max-width: 768px) {
+  .home__caption {
+    white-space: nowrap; } }
+
+@media screen and (max-width: 480px) {
+  .home__caption {
+    white-space: normal;
+    font-size: 2.8125rem; } }
 
 .home__content-decs {
   font-family: lifehack;
-  font-size: 3.9375rem;
+  font-size: 3.4375rem;
   line-height: .9;
   color: #fff; }
+  @media screen and (max-width: 480px) {
+    .home__content-decs {
+      font-size: 2.8125rem; } }
 
 .home_scroll {
   position: absolute;
@@ -686,6 +692,9 @@ p {
 .summary {
   background: url(../../ifc/bg.jpg) center center/cover no-repeat;
   padding-top: 6.875rem; }
+  @media screen and (max-width: 480px) {
+    .summary {
+      padding-top: 4.375rem; } }
 
 .summary__caption {
   text-align: center;
@@ -1007,6 +1016,9 @@ p {
   @media screen and (max-width: 768px) {
     .reviews__name {
       margin-bottom: 1.25rem; } }
+  @media screen and (max-width: 480px) {
+    .reviews__name {
+      text-align: center; } }
 
 .reviews__text {
   line-height: 1.8;
@@ -1159,6 +1171,9 @@ p {
   top: 12%;
   left: 10%;
   color: #fff; }
+  @media screen and (max-width: 768px) {
+    .menu__caption {
+      display: none; } }
   @media screen and (max-width: 480px) {
     .menu__caption {
       display: none; } }
@@ -1168,35 +1183,39 @@ p {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
+  width: 60%;
+  height: 100%;
   top: 0;
-  right: 0;
-  bottom: 0; }
+  right: 0; }
+  @media screen and (max-width: 768px) {
+    .menu__accordion {
+      width: 100%; } }
 
 .menu__accordion-item {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  height: 100%; }
+  display: flex; }
 
-.menu__accordion-item--active .menu__accordion-text {
-  padding: 9.23% 5.55%;
-  width: 33.75rem;
-  background: #373739;
-  opacity: .9; }
-
-.menu__accordion-item--active .menu__accordion-title {
-  color: #f9b43b; }
-
-@media screen and (max-width: 480px) {
-  .menu__accordion-item--active {
-    width: 15.625rem; } }
+.menu__accordion-item--active {
+  z-index: 10; }
+  .menu__accordion-item--active .menu__accordion-text {
+    padding: 9.23% 5.55%;
+    width: auto;
+    background: #373739;
+    opacity: .9; }
+  .menu__accordion-item--active .menu__accordion-title {
+    color: #f9b43b; }
+  @media screen and (max-width: 480px) {
+    .menu__accordion-item--active {
+      width: 15.625rem; } }
 
 .menu__accordion-caption {
   display: block;
   position: relative;
-  width: 5rem;
+  min-width: 5rem;
   height: 100%;
-  text-decoration: none; }
+  text-decoration: none;
+  margin-left: auto; }
 
 .menu__accordion-caption-v1 {
   background: url(../../ifc/v1.jpg) center center/cover no-repeat; }
@@ -1232,7 +1251,8 @@ p {
   text-align: justify;
   padding: 0;
   /*9.23% 5.55%*/
-  width: 0; }
+  width: 0;
+  overflow: hidden; }
 
 .contact {
   background: url(../../ifc/map.jpg) center center/cover no-repeat #80898e; }
@@ -1246,6 +1266,9 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  @media screen and (max-width: 768px) {
+    .container__footer {
+      padding: 0rem 1.25rem; } }
   @media screen and (max-width: 480px) {
     .container__footer {
       -webkit-box-orient: vertical;
@@ -1286,12 +1309,21 @@ p {
   font-size: 0.875rem;
   font-family: "Ubuntu";
   text-align: left; }
+  @media screen and (max-width: 768px) {
+    .footer__left {
+      width: 40%; } }
   @media screen and (max-width: 480px) {
     .footer__left {
       width: 100%;
       -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center; } }
+      align-items: center;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end; } }
+
+.footer__adress {
+  white-space: nowrap; }
 
 .footer__phone {
   display: -webkit-box;
@@ -1327,6 +1359,9 @@ p {
   justify-content: flex-end;
   width: 50%;
   min-height: 3.75rem; }
+  @media screen and (max-width: 768px) {
+    .footer__right {
+      width: 40%; } }
   @media screen and (max-width: 480px) {
     .footer__right {
       width: 100%;
@@ -1428,8 +1463,7 @@ p {
       font-size: 4rem; } }
   @media screen and (max-width: 480px) {
     .ordering__caption {
-      font-size: 3.125rem;
-      margin-top: 5rem; } }
+      font-size: 3.125rem; } }
 
 .form {
   display: -webkit-box;
