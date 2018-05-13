@@ -55,14 +55,14 @@
 }
 
 .home__caption {
-
+		
 	@include tab {
 		white-space: nowrap;
 	}
   
 	@include phon {
 		white-space: normal;
-		font-size: rem(45px);		
+		font-size: rem(45px) !important;		
 	}
 }
 
@@ -73,7 +73,7 @@
 	color: #fff;
 
 	@include phon {
-		font-size: rem(45px);		
+		font-size: rem(40px);		
 	}
 }
 
