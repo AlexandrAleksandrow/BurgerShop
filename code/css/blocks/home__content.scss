@@ -55,19 +55,26 @@
 }
 
 .home__caption {
-  white-space: nowrap;
 
+	@include tab {
+		white-space: nowrap;
+	}
+  
 	@include phon {
-		font-size: rem(63px);
-		
+		white-space: normal;
+		font-size: rem(45px);		
 	}
 }
 
 .home__content-decs {
 	font-family: lifehack;
-  font-size: rem(63px);
+  font-size: rem(55px);
   line-height: .9;
 	color: #fff;
+
+	@include phon {
+		font-size: rem(45px);		
+	}
 }
 
 .home_scroll {
@@ -75,3 +82,4 @@
 	top: 85%;
 	left: 50%;
 }
+
