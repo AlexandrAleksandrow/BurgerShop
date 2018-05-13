@@ -668,7 +668,7 @@ p {
 @media screen and (max-width: 480px) {
   .home__caption {
     white-space: normal;
-    font-size: 2.8125rem; } }
+    font-size: 2.8125rem !important; } }
 
 .home__content-decs {
   font-family: lifehack;
@@ -677,7 +677,7 @@ p {
   color: #fff; }
   @media screen and (max-width: 480px) {
     .home__content-decs {
-      font-size: 2.8125rem; } }
+      font-size: 2.5rem; } }
 
 .home_scroll {
   position: absolute;
@@ -1182,11 +1182,15 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   position: absolute;
   width: 60%;
   height: 100%;
   top: 0;
-  right: 0; }
+  right: 0;
+  bottom: 0; }
   @media screen and (max-width: 768px) {
     .menu__accordion {
       width: 100%; } }
