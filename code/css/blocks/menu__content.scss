@@ -4,6 +4,10 @@
   left: 10%;
   color: #fff;
 
+  @include tab {
+		display: none;
+  }
+
   @include phon {
 		display: none;
   }
@@ -11,39 +15,53 @@
 
 .menu__accordion {
   display: flex;
+  justify-content: flex-end;
   position: absolute;
+  width: 60%;
+  height: 100%;
   top: 0;
   right: 0;
   bottom: 0;
+  
+  @include tab {
+    width: 100%;
+  }
 }
 
 .menu__accordion-item {
-  display: flex;
-  height: 100%;
+  display: flex;   
 }
 
 .menu__accordion-item--active {
+  
   .menu__accordion-text {
     padding: 9.23% 5.55%;
-    width: rem(540px);
+    width: auto;
     background: #373739;
-    opacity: .9;
+    opacity: .9;    
   }
+
   .menu__accordion-title {
     color: #f9b43b;
-  } 
+  }
   
   @include phon {
-		width: rem(250px);
+		position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
   }
 }
 
 .menu__accordion-caption {
   display: block;
   position: relative;
-  width: rem(80px);
+  min-width: rem(80px);
   height: 100%;
-  text-decoration: none;  
+  text-decoration: none; 
+  margin-left: auto; 
 }
 
 .menu__accordion-caption-v1 {
@@ -78,6 +96,7 @@
   font-family: "Ubuntu";
   color: #fff;
   text-align: justify;
-  padding: 0;/*9.23% 5.55%*/
+  padding: 0;
   width: 0;
+  overflow: hidden;
 }
