@@ -1196,18 +1196,23 @@ p {
   display: -ms-flexbox;
   display: flex; }
 
-.menu__accordion-item--active {
-  z-index: 10; }
-  .menu__accordion-item--active .menu__accordion-text {
-    padding: 9.23% 5.55%;
-    width: auto;
-    background: #373739;
-    opacity: .9; }
-  .menu__accordion-item--active .menu__accordion-title {
-    color: #f9b43b; }
-  @media screen and (max-width: 480px) {
-    .menu__accordion-item--active {
-      width: 15.625rem; } }
+.menu__accordion-item--active .menu__accordion-text {
+  padding: 9.23% 5.55%;
+  width: auto;
+  background: #373739;
+  opacity: .9; }
+
+.menu__accordion-item--active .menu__accordion-title {
+  color: #f9b43b; }
+
+@media screen and (max-width: 480px) {
+  .menu__accordion-item--active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10; } }
 
 .menu__accordion-caption {
   display: block;
@@ -1250,7 +1255,6 @@ p {
   color: #fff;
   text-align: justify;
   padding: 0;
-  /*9.23% 5.55%*/
   width: 0;
   overflow: hidden; }
 

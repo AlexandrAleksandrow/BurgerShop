@@ -27,23 +27,29 @@
 }
 
 .menu__accordion-item {
-  display: flex;  
+  display: flex;   
 }
 
 .menu__accordion-item--active {
-  z-index: 10;
+  
   .menu__accordion-text {
     padding: 9.23% 5.55%;
     width: auto;
     background: #373739;
-    opacity: .9;
+    opacity: .9;    
   }
+
   .menu__accordion-title {
     color: #f9b43b;
-  } 
+  }
   
   @include phon {
-		width: rem(250px);
+		position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
   }
 }
 
@@ -88,7 +94,7 @@
   font-family: "Ubuntu";
   color: #fff;
   text-align: justify;
-  padding: 0;/*9.23% 5.55%*/
+  padding: 0;
   width: 0;
   overflow: hidden;
 }
