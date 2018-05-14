@@ -11,7 +11,7 @@ hamburger__menu.addEventListener('click', function(event) {
 
 mob__close.addEventListener('click', function(event) {
   event.preventDefault();
-  menu__mob.style.display = 'none';
-  hamburger__menu.style.display = 'flex';
-  document.body.style.overflow = 'visible';
+  menu__mob.style.display = '';
+  hamburger__menu.style.display = '';
+  document.body.style.overflow = '';
 })
