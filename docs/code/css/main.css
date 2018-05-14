@@ -487,7 +487,8 @@ p {
 
 @media screen and (max-width: 768px) {
   .button__header {
-    margin-left: auto; } }
+    margin-left: auto;
+    margin-right: 1.5625rem; } }
 
 .button {
   display: -webkit-box;
@@ -515,8 +516,9 @@ p {
   width: 1.5625rem;
   height: 1.5625rem;
   background: transparent;
-  top: 5%;
-  right: 17%;
+  position: fixed;
+  top: 4.5%;
+  right: 1.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -526,8 +528,14 @@ p {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: none; }
+  display: none;
+  z-index: 99999999; }
   @media screen and (max-width: 768px) {
+    .hamburger__menu {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+  @media screen and (max-width: 480px) {
     .hamburger__menu {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1700,3 +1708,85 @@ p {
   left: 123.034px;
   top: 4914.942px;
   z-index: 26; }
+
+.menu__mob {
+  position: fixed;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #2f3234;
+  opacity: .98; }
+
+.menu__mob-logo {
+  position: absolute;
+  top: 1.5%;
+  left: 2%; }
+
+.mob__close {
+  position: absolute;
+  top: 3.5%;
+  right: 3%;
+  color: #fff;
+  font-family: ubuntu;
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-decoration: none; }
+
+.menu__mob-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.menu__mob-item {
+  font-size: 23px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .menu__mob-item:after {
+    display: block;
+    content: '';
+    width: 8px;
+    height: 8px;
+    text-align: center;
+    /*transform: translate(-50%, -50%);*/
+    border-radius: 50%;
+    background: #fff;
+    margin-top: 0.9375rem;
+    margin-bottom: 0.9375rem; }
+  .menu__mob-item:nth-child(6):after {
+    width: 0rem;
+    height: 0rem;
+    margin-right: 0rem; }

@@ -3,14 +3,20 @@
   width: rem(25px);
   height: rem(25px);
   background: transparent;
-  top: 5%;
-  right: 17%;
+  position: fixed;
+  top: 4.5%;
+  right: 1.5%;
   display: flex;
   justify-content: center;
   align-items: center;
   display: none;
+  z-index: 99999999;
 
   @include tab {
+    display: flex;
+  }
+
+  @include phon {
     display: flex;
   }
 }
