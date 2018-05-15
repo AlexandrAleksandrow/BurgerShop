@@ -1201,7 +1201,10 @@ p {
       justify-content: center; } }
 
 .accordion__item--active .accordion__trigger {
-  color: #dfa43b; }
+  color: #dfa43b;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s; }
 
 .accordion__item--active .accordion__trigger:before {
   border-top: 0.625rem solid #dfa43b;
@@ -1356,7 +1359,7 @@ p {
   color: #fff;
   text-align: justify;
   padding: 0;
-  width: 0;
+  width: 0vw;
   overflow: hidden; }
 
 .contact {
