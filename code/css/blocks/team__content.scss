@@ -39,7 +39,7 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-
+    
     @include tab {
       flex-direction: column;
       height: rem(200px);
@@ -50,6 +50,7 @@
 
   .accordion__trigger {
     color: #dfa43b;
+    transition: .4s;
   }
 
   .accordion__trigger:before {
