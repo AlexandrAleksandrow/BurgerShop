@@ -1,37 +1,37 @@
 .slider {
   display: flex;
   justify-content: center;
-  align-items: center;
+	align-items: center;
+	width: 500%;	
 }
 
 .slider__content {
 	display: flex;
+	position: relative;
 	justify-content: center;
   align-items: center;
-  padding: 0 rem(16px); 
-
-	@include tab {
-    flex-direction: column;
-	}
-	
-  @include phon {
-		padding: 0% 0%;
-	}
-
+	padding: 0 rem(16px);
+	width: 100%;
+	overflow: hidden;
+	transition: right 0.3s; 
 }
 
 .slider__item {
   display: flex;
-  align-items: center;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	width: 100%;
+	flex-basis: 100%;	
   
   @include tab {
-		flex-direction: column;
+		flex-direction: column;		
 	}
 }
 
 .slider__content-pic {
 	width: 50%;
-
+  text-align: center;
 	@include tab {
 		text-align: center;
 		width: 80%;
@@ -40,12 +40,12 @@
 	@include phon {
 		text-align: center;
 		width: 100%;
-		padding: 0 10%;
+		padding: 20% 10% 0% 10%;
   }
 }
 
 .slider__content-img {
-	max-width: 95%;
+	max-width: 95%;	
 }
 
 .slider__content-text {
@@ -80,9 +80,10 @@
   font-size: rem(14px);
   line-height: 1.4;
 	color: #fff;
-
+	
 	@include phon {
-		font-size: rem(10px);		
+		font-size: rem(10px);
+		padding: 0% 5%;		
 	}
 }
 
@@ -96,26 +97,33 @@
 }
 
 .burger__price-text {
+	display: flex;
+	align-items: center;
   font-size: rem(71px);
   font-family: "Gagalin";
   color: rgb(227, 80, 40);
   white-space: nowrap;
   margin: 0;
   padding: 0;
-  margin-right: rem(35px);
+  margin-right: rem(25px);
 
   @include phon {
-    font-size: rem(50px);	
+    font-size: rem(40px);	
     margin-right: rem(15px);	
 	}
 }
 
 .burger__price-subtext {
   font-size: rem(30px);
-  margin: 0;
+	margin: 0;
+	margin-left: 5%;
   padding: 0;
 }
 
 .burger__button {
-  font-size: rem(14px);
+	font-size: rem(14px);
+	
+	@include phon {
+    padding: 5px 10px;	
+	}
 }

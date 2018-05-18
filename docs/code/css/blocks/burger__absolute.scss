@@ -4,6 +4,7 @@
   left: 0;
   transform: translateY(-50%);
   cursor: pointer;
+  z-index: 5;
 }
 
 .slider__arrow-right {
@@ -12,12 +13,14 @@
   right: 0;
   transform: translateY(-50%);
   cursor: pointer;
+    z-index: 5;
+
 }
 
 .burger__composition {
   position: absolute;
-  top: -10%;
-  left: 3%;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,19 +34,16 @@
   color: #fff;
   text-transform: uppercase;
   cursor: pointer;
+  z-index: 5;
 
   &:hover {
     background: #e35028;
-  }
-
-  &:hover + .burger__popup {
-     left: 12.6%;
-  }  
+  } 
 
   @include tab {
-    width: rem(70px);
-    height: rem(70px);
-	}
+    width: rem(80px);
+    height: rem(80px);
+  }
 }
 
 
@@ -53,18 +53,32 @@
 
 .burger__popup {
   position: absolute;
-  top:-10%;
-  left: 999%; /*12.6%;*/ 
+  display: /*flex*/none;
+  top: 0;
+  left: 9.6%; 
   width: rem(270px);
   height: rem(330px);
   background: #fff;
   border-radius: rem(5px);
   padding: rem(20px);
+  z-index: 5;
+
+  @include phon {
+    left: 9.6%;
+    top: 11.8%;
+  }
 }
 
+.popup__lits {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+}
 .popup__item {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .popup__pic {
@@ -92,7 +106,7 @@
 .burger__calories {
   position: absolute;
   top: 55%;
-  left: 3%;
+  left: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -107,11 +121,11 @@
   text-transform: uppercase;
 
   @include tab {
-    top: -10%; 
+    top: 1%; 
     left: auto;
     right: 3%;
-    width: rem(70px);
-    height: rem(70px);
+    width: rem(80px);
+    height: rem(80px);
 	}
 }
 
