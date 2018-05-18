@@ -18,6 +18,52 @@ mob__close.addEventListener('click', function(event) {
   document.body.style.overflow = '';
 })
 
+
+/*Секция "Бургер" Состав бургера*/
+
+const burger__composition = document.querySelector('.burger__composition');
+const burger__popup = document.querySelector('.burger__popup');
+const popup__exit = document.querySelector('.popup__exit');
+
+burger__composition.addEventListener('click', function(event) {
+  event.preventDefault();
+  burger__popup.style.display = 'flex';
+})
+
+popup__exit.addEventListener('click', function(event) {
+  event.preventDefault();
+  burger__popup.style.display = '';
+})
+
+
+/*Секция "Бургер" Слайдер*/
+
+const left = document.querySelector(".slider__arrow-letf");
+const right = document.querySelector(".slider__arrow-right");
+const items = document.querySelector(".slider__content");
+
+const minRight = 0;
+const maxRight = 80;
+const step = 20;
+let currentRight = 0;
+
+items.style.right = currentRight;
+
+right.addEventListener("click", function() {
+  if (currentRight < maxRight) {
+    currentRight += step;
+    items.style.right = currentRight + "%";
+  }
+});
+
+left.addEventListener("click", function() {
+  if (currentRight > minRight) {
+    currentRight -= step;
+    items.style.right = currentRight + "%";
+  }
+});
+
+
 /*Секция "Меню" аккордеон (доработать функционал)*/
 
 const acco = document.querySelector('.menu');
@@ -71,3 +117,19 @@ for (let i = 0; i < teamItem.length; i++) {
     }
   })
 }
+
+/*Секция "Отзывы" Модальное окно*/
+
+const reviews__button = document.querySelector('.reviews__button');
+const modal = document.querySelector('.modal');
+const modal__close = document.querySelector('.modal__close');
+
+reviews__button.addEventListener('click', function(event) {
+  event.preventDefault();
+  modal.style.display = 'flex';    
+}) 
+
+modal__close.addEventListener('click', function(event) {
+  event.preventDefault();
+  modal.style.display = '';  
+})
