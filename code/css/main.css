@@ -768,7 +768,7 @@ p {
   font-size: 0.875rem;
   font-weight: 400;
   color: #838281;
-  line-height: 1.9;
+  line-height: 1.5;
   text-align: center; }
   @media screen and (max-width: 480px) {
     .summary__item-content p {
@@ -815,6 +815,7 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -947,7 +948,7 @@ p {
 .burger__composition {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 4%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -961,8 +962,8 @@ p {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 5.625rem;
-  height: 5.625rem;
+  width: 5rem;
+  height: 5rem;
   background: #f08c33;
   border-radius: 0.3125rem;
   font-size: 14px;
@@ -973,10 +974,6 @@ p {
   z-index: 5; }
   .burger__composition:hover {
     background: #e35028; }
-  @media screen and (max-width: 768px) {
-    .burger__composition {
-      width: 5rem;
-      height: 5rem; } }
 
 .burger__composition-img {
   margin-bottom: 5px; }
@@ -985,7 +982,7 @@ p {
   position: absolute;
   display: none;
   top: 0;
-  left: 9.6%;
+  left: 12.6%;
   width: 16.875rem;
   height: 20.625rem;
   background: #fff;
@@ -994,8 +991,9 @@ p {
   z-index: 5; }
   @media screen and (max-width: 480px) {
     .burger__popup {
-      left: 9.6%;
-      top: 11.8%; } }
+      left: 4%;
+      top: 17.5%;
+      width: 15rem; } }
 
 .popup__lits {
   display: -webkit-box;
@@ -1047,8 +1045,8 @@ p {
 
 .burger__calories {
   position: absolute;
-  top: 55%;
-  left: 0;
+  bottom: 0%;
+  left: 4%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1062,8 +1060,8 @@ p {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 5.625rem;
-  height: 5.625rem;
+  width: 5rem;
+  height: 5.3125rem;
   background: transparent;
   border-radius: 0.3125rem;
   font-size: 0.875rem;
@@ -1074,9 +1072,7 @@ p {
     .burger__calories {
       top: 1%;
       left: auto;
-      right: 3%;
-      width: 5rem;
-      height: 5rem; } }
+      right: 3%; } }
 
 .burger__calories-img {
   margin-bottom: 5px; }
@@ -1229,7 +1225,10 @@ p {
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  -webkit-transition: height .4s;
+  -o-transition: height .4s;
+  transition: height .4s; }
   @media screen and (max-width: 768px) {
     .accordion__item--active .accordion__content {
       -webkit-box-orient: vertical;
@@ -1345,7 +1344,10 @@ p {
   padding: 9.23% 5.55%;
   width: auto;
   background: #373739;
-  opacity: .9; }
+  opacity: .9;
+  -webkit-transition: width .4s;
+  -o-transition: width .4s;
+  transition: width .4s; }
 
 .menu__accordion-item--active .menu__accordion-title {
   color: #f9b43b; }

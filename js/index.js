@@ -82,8 +82,8 @@ for (let i = 0; i < accoItem.length; i++) {
 
     if (accoItem[i].classList.contains('menu__accordion-item--active')) {
       accoItem[i].classList.remove('menu__accordion-item--active');
-    } 
-    else {      
+    }else { 
+           
     for (let i = 0; i < accoItem.length; i++) {
       if (accoItem[i].classList.contains('menu__accordion-item--active')) {
       accoItem[i].classList.remove('menu__accordion-item--active');
@@ -118,18 +118,47 @@ for (let i = 0; i < teamItem.length; i++) {
   })
 }
 
-/*Секция "Отзывы" Модальное окно*/
 
-const reviews__button = document.querySelector('.reviews__button');
+//Секция "Отзывы" Модальное окно
+
+const reviewsList = document.querySelector('.reviews__list');
 const modal = document.querySelector('.modal');
-const modal__close = document.querySelector('.modal__close');
+const modalClose = document.querySelector('.modal__close');
+const modalCaption = document.querySelector('.modal__caption');
+const modalText = document.querySelector('.modal__text');
 
-reviews__button.addEventListener('click', function(event) {
-  event.preventDefault();
-  modal.style.display = 'flex';    
-}) 
+reviewsList.addEventListener('click', e=> {
+  e.preventDefault();
+  let element = e.target; // ловим кликнутый эелмент
+  
+  if(element.tagName === 'A') { // если у кликнутого элемента класс А - ссылка, то выполняем код ниже
+    
+    let popupText = element.previousElementSibling.innerHTML; // получаем текст отзыва
+    let popupCaption = element.previousElementSibling.previousElementSibling.innerHTML; // получаем имя
 
-modal__close.addEventListener('click', function(event) {
-  event.preventDefault();
-  modal.style.display = '';  
+    modalText.innerHTML = popupText; // вставляем текст отзыва
+    modalCaption.innerHTML = popupCaption; // вставляем имя
+    modal.style.display = 'flex'; // показываем модальное окно со вставленным содержимым
+  }
+})  
+
+reviewsList.addEventListener('keyup', e => { //закрытие по отпусканию кнопки esc
+  const keyName = e.keyCode;
+  console.log(keyName);
+
+  if (keyName === 27) {
+    modal.style.display = '';
+  }
+});
+
+modalClose.addEventListener('click', e => { //закрытие по клику на красный крестик
+  e.preventDefault();
+  modal.style.display = '';
+})
+
+modal.addEventListener('click', e => { //закрытие по клику на фон
+  if(e.target === modal) { // если клик выполнен по серому фону, то ->
+    e.preventDefault();
+    modal.style.display = '';
+  }  
 })
