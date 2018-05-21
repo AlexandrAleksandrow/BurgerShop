@@ -39,6 +39,7 @@
     overflow: hidden;
     display: flex;
     align-items: center;
+    transition: height .4s;
     
     @include tab {
       flex-direction: column;

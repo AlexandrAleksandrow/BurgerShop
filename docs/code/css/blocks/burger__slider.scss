@@ -17,7 +17,8 @@
 }
 
 .slider__item {
-  display: flex;
+	display: flex;
+	position: relative;
 	align-items: center;
 	justify-content: center;
 	box-sizing: border-box;
