@@ -1,0 +1,69 @@
+.menu__mob {
+  position: fixed;
+  display: /*flex*/none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #2f3234;
+  opacity: .98; 
+  z-index: 7;
+}
+
+.menu__mob-logo {
+  position: absolute;
+  top: 1.5%;
+  left: 2%;
+}
+
+.mob__close {
+  position: absolute;
+  top: 3.5%;
+  right: 3%;
+  color: #fff;
+  font-family: ubuntu;
+  font-size: rem(30px);
+  font-weight: 700;
+  text-decoration: none;
+  &:hover {
+    color: red;
+  }
+}
+
+.menu__mob-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+}
+
+.menu__mob-item {  
+  font-size: 23px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+ &:after {
+    display: block;
+    content: '';			
+		width: 8px;
+    height: 8px;
+    text-align: center;
+		/*transform: translate(-50%, -50%);*/
+    border-radius: 50%;
+    background: #fff;  
+    margin-top: rem(15px);
+    margin-bottom: rem(15px);
+  }
+
+  &:nth-child(6):after {
+    width: rem(0px);
+    height: rem(0px);
+    margin-right: rem(0px);
+  }  
+}

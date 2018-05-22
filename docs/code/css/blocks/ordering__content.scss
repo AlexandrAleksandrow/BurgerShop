@@ -1,0 +1,156 @@
+.container__ordering{
+  @include tab {
+    width: 90%;
+  }
+}
+.ordering__caption {
+  text-align: center;
+
+  @include tab {
+    flex-direction: column;
+    font-size: rem(64px);
+  }
+
+  @include phon {
+    font-size: rem(50px);    
+  }
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-height: rem(265px);  
+
+  @include tab {
+    flex-direction: column;
+  }
+}
+
+.form__column {
+  width: 49%;
+
+  @include tab {
+    width: 100%;
+  }
+}
+
+.form__row {
+  display: flex;
+  margin-bottom: rem(20px);
+}
+
+.form__row--margin {
+  margin-bottom: rem(8px);
+}
+
+.form__item {
+  flex: 1 1 0%;
+  margin-right: rem(20px);
+  text-align: left;
+
+  &:last-child {
+    margin-right: rem(0px);
+  }
+}
+
+.form__label {
+  color: #fff;
+  font-size: rem(14px);
+  font-family: "Ubuntu";
+  margin-bottom: rem(10px);
+}
+
+.form__input {
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  min-height: rem(35px);
+  padding-left: rem(20px);
+  padding-right: rem(20px); 
+}
+
+.form__input-textarea {
+  height: rem(111px);
+  resize: none;
+}
+
+.form__radio {
+  display: flex;
+  margin-right: rem(20px);
+}
+
+.form__input-radio {
+  position: absolute;
+	left: rem(-99999px);
+
+  &:checked + .form__circle .form__inner {
+   background-color: #e35028;
+  }
+}
+
+.form__circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: rem(15px);
+  height: rem(15px);
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: rem(10px);
+}
+
+.form__inner {
+  width: rem(7px);
+  height: rem(7px);
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.form__checkbox {
+  display: flex;  
+}
+
+.form__checkbox--invisible {
+  position: absolute;
+  left: rem(-99999px);
+  
+  &:checked + .form__checkbox--visible .check__img {
+    opacity: 1;
+  }
+}
+
+.form__checkbox--visible {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  margin-right: rem(10px);
+  width: rem(15px);
+  height: rem(15px);
+}
+
+.check__img {
+  opacity: 0;
+}
+
+.form__submit {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+
+.Закажите_доставку {
+  font-size: 49.761px;
+  font-family: "Gagalin";
+  color: rgb(249, 180, 59);
+  line-height: 1.2;
+  text-align: center;
+  -moz-transform: matrix( 0.99971198644642,0,0,1.00657511689602,0,0);
+  -webkit-transform: matrix( 0.99971198644642,0,0,1.00657511689602,0,0);
+  -ms-transform: matrix( 0.99971198644642,0,0,1.00657511689602,0,0);
+  position: absolute;
+  left: 123.034px;
+  top: 4914.942px;
+  z-index: 26;
+}

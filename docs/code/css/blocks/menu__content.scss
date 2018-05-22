@@ -1,0 +1,119 @@
+.menu__caption {
+  position: absolute;
+  top: 12%;
+  left: 10%;
+  color: #fff;
+
+  @include tab {
+		display: none;
+  }
+}
+
+.menu__accordion {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;  
+}
+
+.menu__accordion-item {
+  display: flex;   
+}
+
+.menu__accordion-caption {
+  display: block;
+  position: relative;
+  min-width: rem(80px);
+  height: 100%;
+  text-decoration: none;  
+}
+
+.menu__accordion-caption-v1 {
+  background: url(../../ifc/v1.jpg) center center/cover no-repeat;
+}
+
+.menu__accordion-caption-v2 {
+  background: url(../../ifc/v2.jpg) center center/cover no-repeat;
+}
+
+.menu__accordion-caption-v3 {
+  background: url(../../ifc/v3.jpg) center center/cover no-repeat;
+}
+
+.menu__accordion-title {
+  position: absolute;
+  left: 90%;
+  top: 100%;
+  transform-origin: 0 0;
+  transform: rotate(-90deg) translateY(-100%);
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-size: rem(40px);
+  font-family: "Gagalin";
+  font-weight: 500;
+  color: #fff;
+  margin-top: rem(-20px);  
+}
+
+.menu__accordion-content {  
+  width: 0;  
+  background: #373739;
+  opacity: .9;  
+  overflow: hidden;
+}
+
+.menu__accordion-text {
+  font-size: rem(14px);  
+  font-family: "Ubuntu";
+  color: #fff;
+  text-align: justify;  
+}
+
+
+.menu__accordion-item--active {
+  
+  width: rem(700px);
+  
+  @include phon {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 10;     
+  }
+  
+  .menu__accordion-content {
+    
+    width: 100%;   
+    
+    @include phon {
+           
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;         
+    }
+  }
+
+  .menu__accordion-caption {
+    @include phon {
+      top: 0;
+      left: 0;
+      bottom: 0;          
+    }
+  }
+
+  .menu__accordion-title {
+    color: #f9b43b;
+  }
+
+  .menu__accordion-text {
+    padding: 9% 5%;    
+  }
+}
