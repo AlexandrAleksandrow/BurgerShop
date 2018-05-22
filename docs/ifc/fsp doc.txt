@@ -1,0 +1,7 @@
+.vk, .fb, .inst, .tw
+{ display: inline-block; background: url('png.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
+ 
+.vk { background-position: -10px -0px; width: 23px; height: 13px; }
+.fb { background-position: -10px -23px; width: 20px; height: 20px; }
+.inst { background-position: -10px -53px; width: 20px; height: 20px; }
+.tw { background-position: -10px -83px; width: 20px; height: 16px; }
