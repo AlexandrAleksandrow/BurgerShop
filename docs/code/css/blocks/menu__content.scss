@@ -11,8 +11,11 @@
 
 .menu__accordion {
   display: flex;
+  justify-content: flex-end;
   position: absolute;
   height: 100%;
+  max-width: 100%;
+  width: 100%;
   top: 0;
   right: 0;
   bottom: 0;  
@@ -58,8 +61,7 @@
 }
 
 .menu__accordion-content {  
-  width: 0;
-  transition: width .4s;
+  width: 0;  
   background: #373739;
   opacity: .9;  
   overflow: hidden;
@@ -69,21 +71,29 @@
   font-size: rem(14px);  
   font-family: "Ubuntu";
   color: #fff;
-  text-align: justify; 
-  transition: opacity .2s;
+  text-align: justify;  
 }
 
 
 .menu__accordion-item--active {
-
+  
+  width: rem(700px);
+  
   @include phon {
-    z-index: 50;     
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 10;     
   }
   
   .menu__accordion-content {
-    width: 50vw;
     
-    @include phon {     
+    width: 100%;   
+    
+    @include phon {
+           
      top: 0;
      left: 0;
      right: 0;
@@ -104,14 +114,6 @@
   }
 
   .menu__accordion-text {
-    padding: 9% 5%;
-    animation: acco-text .8s linear forwards;
+    padding: 9% 5%;    
   }
-
-  @keyframes acco-text {
-    0% {opacity: 0; }
-    100% { opacity: 1; }
-  }
-
-
 }
