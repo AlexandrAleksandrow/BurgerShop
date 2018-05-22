@@ -1,4 +1,4 @@
-/*Полноэкранное меню*/
+//Полноэкранное меню
 
 const hamburger__menu = document.querySelector('.hamburger__menu');
 const menu__mob = document.querySelector('.menu__mob');
@@ -19,7 +19,7 @@ mob__close.addEventListener('click', function(event) {
 })
 
 
-/*Секция "Бургер" Состав бургера*/
+//Секция "Бургер" Иконка - состав бургера
 
 const burger__composition = document.querySelector('.burger__composition');
 const burger__popup = document.querySelector('.burger__popup');
@@ -36,7 +36,7 @@ popup__exit.addEventListener('click', function(event) {
 })
 
 
-/*Секция "Бургер" Слайдер*/
+//Секция "Бургер" Слайдер
 
 const left = document.querySelector(".slider__arrow-letf");
 const right = document.querySelector(".slider__arrow-right");
@@ -64,10 +64,31 @@ left.addEventListener("click", function() {
 });
 
 
-/*Секция "Меню" аккордеон (доработать функционал)*/
+//Секция "Меню" аккордеон
 
 const acco = document.querySelector('.menu');
 const accoItem = document.querySelectorAll('.menu__accordion-item');
+const trigger = document.querySelector('.menu__accordion-caption');
+const triggerWidth = parseInt(getComputedStyle(trigger).width);
+const accoContent = document.querySelectorAll('menu__accordion-content');
+
+function widhtCalculate (n, opened) {
+  let screenWidth = document.documentElement.clientWidth;
+  
+  if (screenWidth <= 768 && screenWidth > 480) {
+      if (!opened) {
+         accoContent[n].style.width = screenWidth - triggerWidth * accoItem.length + 'px';
+      } else {
+          accoContent[n].style.width = '';
+      };
+  } else if (screenWidth <= 480) {
+      if (!opened) {
+          accoContent[n].style.width = screenWidth - triggerWidth + 'px';
+      } else {
+          accoContent[n].style.width = '';
+      };
+  };
+};
 
 acco.addEventListener('click', function(e) {
   for (let i = 0; i < accoItem.length; i++) {
@@ -94,7 +115,7 @@ for (let i = 0; i < accoItem.length; i++) {
   })
 }
 
-/*Секция "Команда" аккордеон*/
+//Секция "Команда" аккордеон
 
 const team = document.querySelector('.team__block');
 const teamItem = document.querySelectorAll('.accordion__item');
