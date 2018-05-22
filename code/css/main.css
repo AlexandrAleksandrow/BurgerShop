@@ -1308,8 +1308,13 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   position: absolute;
   height: 100%;
+  max-width: 100%;
+  width: 100%;
   top: 0;
   right: 0;
   bottom: 0; }
@@ -1355,9 +1360,6 @@ p {
 
 .menu__accordion-content {
   width: 0;
-  -webkit-transition: width .4s;
-  -o-transition: width .4s;
-  transition: width .4s;
   background: #373739;
   opacity: .9;
   overflow: hidden; }
@@ -1366,49 +1368,35 @@ p {
   font-size: 0.875rem;
   font-family: "Ubuntu";
   color: #fff;
-  text-align: justify;
-  -webkit-transition: opacity .2s;
-  -o-transition: opacity .2s;
-  transition: opacity .2s; }
+  text-align: justify; }
 
-@media screen and (max-width: 480px) {
-  .menu__accordion-item--active {
-    z-index: 50; } }
-
-.menu__accordion-item--active .menu__accordion-content {
-  width: 50vw; }
+.menu__accordion-item--active {
+  width: 43.75rem; }
   @media screen and (max-width: 480px) {
-    .menu__accordion-item--active .menu__accordion-content {
+    .menu__accordion-item--active {
+      position: absolute;
       top: 0;
       left: 0;
       right: 0;
+      bottom: 0;
+      z-index: 10; } }
+  .menu__accordion-item--active .menu__accordion-content {
+    width: 100%; }
+    @media screen and (max-width: 480px) {
+      .menu__accordion-item--active .menu__accordion-content {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; } }
+  @media screen and (max-width: 480px) {
+    .menu__accordion-item--active .menu__accordion-caption {
+      top: 0;
+      left: 0;
       bottom: 0; } }
-
-@media screen and (max-width: 480px) {
-  .menu__accordion-item--active .menu__accordion-caption {
-    top: 0;
-    left: 0;
-    bottom: 0; } }
-
-.menu__accordion-item--active .menu__accordion-title {
-  color: #f9b43b; }
-
-.menu__accordion-item--active .menu__accordion-text {
-  padding: 9% 5%;
-  -webkit-animation: acco-text .8s linear forwards;
-  animation: acco-text .8s linear forwards; }
-
-@-webkit-keyframes acco-text {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-@keyframes acco-text {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
+  .menu__accordion-item--active .menu__accordion-title {
+    color: #f9b43b; }
+  .menu__accordion-item--active .menu__accordion-text {
+    padding: 9% 5%; }
 
 .contact {
   background: url(../../ifc/map.jpg) center center/cover no-repeat #80898e; }
