@@ -1,0 +1,50 @@
+$orange: #e45028;
+$yellow: #f9b43b;
+$black: #2f3234;
+$red: #e35028;
+
+
+$tablets: 768px;
+$phones: 480px;
+
+
+
+/*style*/
+@import "./layout/normalize.scss";
+
+/*media*/
+@import "./layout/media.scss";
+
+/*layout*/
+@import "./layout/fonts.scss";
+@import "./layout/base.scss";
+
+
+
+
+/*blocks*/
+@import "./blocks/home.scss";
+@import "./blocks/header.scss";
+@import "./blocks/button.scss";
+@import "./blocks/hamburger__menu.scss";
+@import "./blocks/sidebar.scss";
+@import "./blocks/home__content.scss";
+@import "./blocks/caption.scss";
+@import "./blocks/summary.scss";
+@import "./blocks/summary_caption.scss";
+@import "./blocks/summary_list.scss";
+@import "./blocks/burger.scss";
+@import "./blocks/burger__slider.scss";
+@import "./blocks/burger__absolute.scss";
+@import "./blocks/reviews-list.scss";
+@import "./blocks/team.scss";
+@import "./blocks/team__content.scss";
+@import "./blocks/menu.scss";
+@import "./blocks/menu__content.scss";
+@import "./blocks/contact.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/ordering.scss";
+@import "./blocks/ordering__content.scss";
+@import "./blocks/menu__mob.scss";
+@import "./blocks/modal__window.scss";
+
