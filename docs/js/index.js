@@ -160,6 +160,7 @@ reviewsList.addEventListener('click', e=> {
     modalText.innerHTML = popupText; // вставляем текст отзыва
     modalCaption.innerHTML = popupCaption; // вставляем имя
     modal.style.display = 'flex'; // показываем модальное окно со вставленным содержимым
+    document.body.style.overflow = 'hidden';
   }
 })  
 
@@ -169,17 +170,90 @@ reviewsList.addEventListener('keyup', e => { //закрытие по отпус�
 
   if (keyName === 27) {
     modal.style.display = '';
+    document.body.style.overflow = '';
   }
 });
 
 modalClose.addEventListener('click', e => { //закрытие по клику на красный крестик
   e.preventDefault();
   modal.style.display = '';
+  document.body.style.overflow = '';
 })
 
 modal.addEventListener('click', e => { //закрытие по клику на фон
   if(e.target === modal) { // если клик выполнен по серому фону, то ->
     e.preventDefault();
     modal.style.display = '';
+    document.body.style.overflow = '';
   }  
 })
+
+
+//Секция "Ordering" отправка на почту данных из формы
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Contacts - Map
+
+ymaps.ready(init);
+
+var myMap;
+
+
+function init() {
+  myMap = new ymaps.Map("YMapsID", {
+      center: [59.92, 30.33],
+      zoom: 12,           
+  });
+
+  myMap.controls
+  .add('zoomControl')  
+  .add('mapTools')
+
+  var placemark = new ymaps.Placemark([59.96, 30.31], {
+    hintContent: 'БургерШоп',
+    balloonContent: 'Пн-Вс 10:00-22:00 <br> 8(812)313-24-88',
+  },
+  {
+    iconLayout: 'default#image',
+    iconImageHref: './ifc/mapmarker.png',
+    iconImageSize: [46, 57],
+    iconImageOffset: [-23, -57]
+  });
+
+  var placemark1 = new ymaps.Placemark([59.94, 30.36], {
+    hintContent: 'БургерШоп',
+    balloonContent: 'Пн-Вс 10:00-22:00 <br> 8(812)313-24-88',
+  },
+  {
+    iconLayout: 'default#image',
+    iconImageHref: './ifc/mapmarker.png',
+    iconImageSize: [46, 57],
+    iconImageOffset: [-23, -57]
+  });
+
+  var placemark2 = new ymaps.Placemark([59.92, 30.35], {
+    hintContent: 'БургерШоп',
+    balloonContent: 'Пн-Вс 10:00-22:00 <br> 8(812)313-24-88',
+  },
+  {
+    iconLayout: 'default#image',
+    iconImageHref: './ifc/mapmarker.png',
+    iconImageSize: [46, 57],
+    iconImageOffset: [-23, -57]
+  });
+
+  myMap.geoObjects.add(placemark);
+  myMap.geoObjects.add(placemark1);
+  myMap.geoObjects.add(placemark2);  
+}

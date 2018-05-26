@@ -63,21 +63,20 @@
 .menu__accordion-content {  
   width: 0;  
   background: #373739;
-  opacity: .9;  
-  overflow: hidden;
+  opacity: .9;     
 }
 
 .menu__accordion-text {
   font-size: rem(14px);  
   font-family: "Ubuntu";
   color: #fff;
-  text-align: justify;  
+  text-align: justify;   
 }
 
 
 .menu__accordion-item--active {
   
-  width: rem(700px);
+  width: rem(700px);  
   
   @include phon {
    position: absolute;
@@ -90,10 +89,10 @@
   
   .menu__accordion-content {
     
-    width: 100%;   
+    width: 100%;  
+         
     
-    @include phon {
-           
+    @include phon {     
      top: 0;
      left: 0;
      right: 0;
@@ -110,10 +109,16 @@
   }
 
   .menu__accordion-title {
+    transition: .4s; 
     color: #f9b43b;
   }
 
   .menu__accordion-text {
-    padding: 9% 5%;    
+    padding: 9% 5%;  
+    
+    @include phon {
+      
+      padding: 5%;          
+    }
   }
 }

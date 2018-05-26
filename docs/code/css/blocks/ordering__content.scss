@@ -1,4 +1,7 @@
 .container__ordering{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @include tab {
     width: 90%;
   }
@@ -12,7 +15,7 @@
   }
 
   @include phon {
-    font-size: rem(50px);    
+    font-size: rem(40px);    
   }
 }
 
@@ -137,20 +140,4 @@
 .form__submit {
   background-color: transparent;
   border-color: transparent;
-}
-
-
-.Закажите_доставку {
-  font-size: 49.761px;
-  font-family: "Gagalin";
-  color: rgb(249, 180, 59);
-  line-height: 1.2;
-  text-align: center;
-  -moz-transform: matrix( 0.99971198644642,0,0,1.00657511689602,0,0);
-  -webkit-transform: matrix( 0.99971198644642,0,0,1.00657511689602,0,0);
-  -ms-transform: matrix( 0.99971198644642,0,0,1.00657511689602,0,0);
-  position: absolute;
-  left: 123.034px;
-  top: 4914.942px;
-  z-index: 26;
 }

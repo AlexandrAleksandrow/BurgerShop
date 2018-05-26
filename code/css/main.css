@@ -905,146 +905,149 @@ p {
 .burger__button {
   font-size: 0.875rem; }
 
-.slider__arrow-letf {
-  position: absolute;
-  top: 35%;
-  left: 0;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  cursor: pointer; }
-
-.slider__arrow-right {
-  position: absolute;
-  top: 35%;
-  right: 0;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  cursor: pointer; }
-
-.burger__composition {
-  position: absolute;
-  top: -10%;
-  left: 3%;
+.slider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 5.625rem;
-  height: 5.625rem;
-  background: #f08c33;
-  border-radius: 0.3125rem;
-  font-size: 14px;
-  font-family: "Gagalin";
-  color: #fff;
-  text-transform: uppercase;
-  cursor: pointer; }
-  .burger__composition:hover {
-    background: #e35028; }
-  .burger__composition:hover + .burger__popup {
-    left: 12.6%; }
+  width: 500%; }
+
+.slider__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 1rem;
+  width: 100%;
+  overflow: hidden;
+  -webkit-transition: right 0.3s;
+  -o-transition: right 0.3s;
+  transition: right 0.3s; }
+
+.slider__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%; }
   @media screen and (max-width: 768px) {
-    .burger__composition {
-      width: 4.375rem;
-      height: 4.375rem; } }
+    .slider__item {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
 
-.burger__composition-img {
-  margin-bottom: 5px; }
+.slider__content-pic {
+  width: 50%;
+  text-align: center; }
+  @media screen and (max-width: 768px) {
+    .slider__content-pic {
+      text-align: center;
+      width: 80%; } }
+  @media screen and (max-width: 480px) {
+    .slider__content-pic {
+      text-align: center;
+      width: 100%;
+      padding: 20% 10% 0% 10%; } }
 
-.burger__popup {
-  position: absolute;
-  top: -10%;
-  left: 999%;
-  /*12.6%;*/
-  width: 16.875rem;
-  height: 20.625rem;
-  background: #fff;
-  border-radius: 0.3125rem;
-  padding: 1.25rem; }
+.slider__content-img {
+  max-width: 95%; }
 
-.popup__item {
+.slider__content-text {
+  text-align: left;
+  width: 50%; }
+  @media screen and (max-width: 768px) {
+    .slider__content-text {
+      text-align: center;
+      width: 80%; } }
+  @media screen and (max-width: 480px) {
+    .slider__content-text {
+      text-align: center;
+      width: 100%; } }
+
+.slider__caption {
+  color: #fff; }
+  @media screen and (max-width: 768px) {
+    .slider__caption {
+      font-size: 3.125rem; } }
+  @media screen and (max-width: 480px) {
+    .slider__caption {
+      font-size: 2.8125rem; } }
+
+.slider__content-decs {
+  font-family: ubuntu;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #fff; }
+  @media screen and (max-width: 480px) {
+    .slider__content-decs {
+      font-size: 0.625rem;
+      padding: 0% 5%; } }
+
+.burger__price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
-
-.popup__pic {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 3.125rem;
-  height: 3.125rem; }
-
-.popup__ingredient {
-  margin-left: 1.25rem; }
-
-.popup__weight {
-  margin-left: auto; }
-
-.popup__exit {
-  position: absolute;
-  top: 2%;
-  left: 90%; }
-
-.burger__calories {
-  position: absolute;
-  top: 55%;
-  left: 3%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 5.625rem;
-  height: 5.625rem;
-  background: transparent;
-  border-radius: 0.3125rem;
-  font-size: 0.875rem;
-  font-family: "Gagalin";
-  color: #f9d19d;
-  text-transform: uppercase; }
   @media screen and (max-width: 768px) {
-    .burger__calories {
-      top: -10%;
-      left: auto;
-      right: 3%;
-      width: 4.375rem;
-      height: 4.375rem; } }
+    .burger__price {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
 
-.burger__calories-img {
-  margin-bottom: 5px; }
+.burger__price-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 4.4375rem;
+  font-family: "Gagalin";
+  color: #e35028;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+  margin-right: 1.5625rem; }
+  @media screen and (max-width: 480px) {
+    .burger__price-text {
+      font-size: 2.5rem;
+      margin-right: 0.9375rem; } }
 
-.burger_calories-number {
-  position: absolute;
-  top: 35%;
-  left: 35%;
-  font-size: 1rem; }
+.burger__price-subtext {
+  font-size: 1.875rem;
+  margin: 0;
+  margin-left: 5%;
+  padding: 0; }
+
+.burger__button {
+  font-size: 0.875rem; }
+  @media screen and (max-width: 480px) {
+    .burger__button {
+      padding: 5px 10px; } }
 
 .reviews__container {
   padding-right: 0;
