@@ -1,3 +1,9 @@
+.summary__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .summary__caption {
 	@include phon {
     font-size: rem(50px);

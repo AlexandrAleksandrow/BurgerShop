@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1" />
   <title>BurgerShop</title>
   <link href="./code/css/main.css" rel="stylesheet">
 </head>
@@ -52,7 +53,7 @@
     </section>
 
   <section class="section summary">
-      <div class="container">
+      <div class="container summary__container">
       <div class="summary__caption caption">мы лучшие</div>
       <ul class="summary__list">
         <li class="summary__item">
@@ -82,6 +83,7 @@
 
   <section class="section burger">
   <div class="container">
+    <div class="burger__container">
     <div class="slider">
       <div class="slider__arrow-letf"><img src="./ifc/arrow-left.png" alt="arrow-left" class="slider__arrow-img"></div>
       <div class="slider__arrow-right"><img src="./ifc/arrow-right.png" alt="arrow-right" class="slider__arrow-img"></div>
@@ -364,6 +366,7 @@
        </li>
       </ul>               
   </div>
+  </div>
   </div>  
   </section>
 
@@ -545,7 +548,7 @@
   <section class="section ordering">
   <div class="container container__ordering">
   <div class="ordering__caption caption">закажите доставку</div>
-  <form method="get" name="form" class="form">
+  <form action="server.php" method="post" name="form" class="form" id="order__form">
   <div class="form__column">
     <div class="form__row">
       <div class="form__item ">   
@@ -556,31 +559,31 @@
       <label class="form__label">Телефон</label>
       <input type="text" name="phone" class="form__input">						
     </div>
-  </div>
-  <div class="form__row">
-  <div class="form__item">
-    <label class="form__label">Улица</label>
-    <input type="text" name="street" class="form__input">						
-  </div>
-  </div>
-  <div class="form__row">
-  <div class="form__item">
-    <label class="form__label">Дом</label>
-    <input type="text" name="house" class="form__input">						
-  </div>
-  <div class="form__item">
-      <label class="form__label">Корпус</label>
-      <input type="text" name="housing" class="form__input">						
-  </div>
-  <div class="form__item">
-      <label class="form__label">Квартира</label>
-      <input type="text" name="apartment" class="form__input">						
-  </div>
-  <div class="form__item">
-      <label class="form__label">Этаж</label>
-      <input type="text" name="floor" class="form__input">						
-  </div>
-  </div>
+    </div>
+    <div class="form__row">
+     <div class="form__item">
+       <label class="form__label">Улица</label>
+       <input type="text" name="street" class="form__input">						
+     </div>
+   </div>
+    <div class="form__row">
+      <div class="form__item">
+        <label class="form__label">Дом</label>
+        <input type="text" name="house" class="form__input">						
+      </div>
+      <div class="form__item">
+        <label class="form__label">Корпус</label>
+        <input type="text" name="housing" class="form__input">						
+      </div>
+      <div class="form__item">
+        <label class="form__label">Квартира</label>
+        <input type="text" name="apartment" class="form__input">						
+      </div>
+      <div class="form__item">
+        <label class="form__label">Этаж</label>
+        <input type="text" name="floor" class="form__input">						
+      </div>
+    </div>
   </div>
   <div class="form__column">
     <div class="form__row">
@@ -588,46 +591,43 @@
       <label class="form__label">Комментарий</label> 
       <textarea rows="10" cols="30" name="comment" class="form__input form__input-textarea"></textarea>
       </div>
-  </div>
-  <div class="form__buttons">
-  <div class="form__row form__row--margin">
-  <label class="form__radio">
-      <input type="radio" name="yes" value="radio1" class="form__input-radio">
+    </div>
+    <div class="form__buttons">
+      <div class="form__row form__row--margin">
+      <label class="form__radio">
+      <input type="radio" name="yes" value="radio1" class="form__input-radio" id="need-change">
       <div class="form__circle">
         <div class="form__inner"></div>
       </div>
       <span class="form__label">Потребутся сдача</span>
     </label>    
     <label class="form__radio">
-      <input type="radio" name="yes" value="radio1" class="form__input-radio">
+      <input type="radio" name="yes" value="radio1" class="form__input-radio" id="pay-card">
       <div class="form__circle">
         <div class="form__inner"></div>
       </div>
       <span class="form__label">Оплата по карте</span>
     </label>
   </div>
+  </div>
   <div class="form_row">
     <label class="form__checkbox">
-      <input type="checkbox" class="form__checkbox--invisible" name="callback">
+      <input type="checkbox" class="form__checkbox--invisible" name="callback" id="callback">
       <div class="form__checkbox--visible"><img src="./ifc/check.png" alt="check" class="check__img"></div>
       <span class="form__label">Не перезванивать</span>
-    </labe>
+    </label>
   </div>
   <div class="form__row">
-  <div class="form__button">		
-    <a href="#" class="form__submit button">Заказать</a>
+      <button class="form__submit button">Заказать</button>
+      <button class="form__submit button">Очистить</button>    
   </div>
-  <div class="form__button">		
-    <a href="#" class="form__submit button">Очистить</a>
-  </div>
-  </div>
-  </div>
-  </div>
+  </div>  
   </form>
   </div>
   </section>
 
   <section class="section contact">
+      <div id="YMapsID" class="YMaps"></div>
     <div class="footer container__footer">
      <div class="footer__left">
        <div class="footer__adress">Санкт-Петербург, ул. Бабушкина, д.12/1</div>
@@ -716,6 +716,8 @@
       <div class="modal__text"></div>
    </div>
 </div>
-  <script src="./js/index.js"></script>
+<script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="./js/index.js"></script>
 </body>
 </html>

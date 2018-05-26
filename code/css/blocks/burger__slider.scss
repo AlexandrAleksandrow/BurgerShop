@@ -1,4 +1,12 @@
-.slider {
+.burger__container {
+  width: 500%;
+	height: 100%;
+	display: flex;
+  justify-content: center;
+	align-items: center;
+}
+
+.slider {	
   display: flex;
   justify-content: center;
 	align-items: center;
