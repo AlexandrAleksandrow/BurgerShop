@@ -189,18 +189,7 @@ modal.addEventListener('click', e => { //закрытие по клику на �
 })
 
 
-//Секция "Ordering" отправка на почту данных из формы
-
-
-
-
-
-
-
-
-
-
-
+//Секция "Ordering" отправка данных из формы
 
 
 //Contacts - Map
@@ -220,9 +209,9 @@ function init() {
   .add('zoomControl')  
   .add('mapTools')
 
-  var placemark = new ymaps.Placemark([59.96, 30.31], {
+  var placemark = new ymaps.Placemark([59.96, 30.3289], {
     hintContent: 'БургерШоп',
-    balloonContent: 'Пн-Вс 10:00-22:00 <br> 8(812)313-24-88',
+    balloonContent: 'ул. Б.Посадская, 11<br> Пн-Вс 10:00-22:00 <br> 8(812)313-24-88',
   },
   {
     iconLayout: 'default#image',
@@ -233,7 +222,7 @@ function init() {
 
   var placemark1 = new ymaps.Placemark([59.94, 30.36], {
     hintContent: 'БургерШоп',
-    balloonContent: 'Пн-Вс 10:00-22:00 <br> 8(812)313-24-88',
+    balloonContent: 'ул. Восстания, 30/7 <br> Пн-Вс 10:00-22:00 <br> 8(812)313-24-88',
   },
   {
     iconLayout: 'default#image',
@@ -244,7 +233,7 @@ function init() {
 
   var placemark2 = new ymaps.Placemark([59.92, 30.35], {
     hintContent: 'БургерШоп',
-    balloonContent: 'Пн-Вс 10:00-22:00 <br> 8(812)313-24-88',
+    balloonContent: 'ул. К.Заслонова, 11 <br> Пн-Вс 10:00-22:00 <br> 8(812)313-24-88',
   },
   {
     iconLayout: 'default#image',
@@ -257,3 +246,55 @@ function init() {
   myMap.geoObjects.add(placemark1);
   myMap.geoObjects.add(placemark2);  
 }
+
+
+//OnePageScroll
+
+const maincontent = document.querySelector('.maincontent');
+
+const minTop = 0;
+const maxTop = -700;
+const stepTop = 100;
+let currentTop = 0;
+
+maincontent.style.top = currentTop;
+
+document.addEventListener('wheel', (e) => {
+  
+  const deltaY = e.wheelDeltaY;  
+
+  if (deltaY < minTop) {
+    console.log('down');
+    currentTop -= stepTop;
+    maincontent.style.top = currentTop + "%";
+  }
+
+  if(deltaY > minTop) {
+    console.log('up');
+    currentTop += stepTop;
+    maincontent.style.top = currentTop + "%";
+  }
+})
+
+/*
+const minRight = 0;
+const maxRight = 80;
+const step = 20;
+let currentRight = 0;
+
+items.style.right = currentRight;
+
+right.addEventListener("click", function() {
+  if (currentRight < maxRight) {
+    currentRight += step;
+    items.style.right = currentRight + "%";
+  }
+});
+
+left.addEventListener("click", function() {
+  if (currentRight > minRight) {
+    currentRight -= step;
+    items.style.right = currentRight + "%";
+  }
+});
+*/

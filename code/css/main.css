@@ -369,11 +369,19 @@ body {
   box-sizing: border-box; }
 
 .wrapper {
-  min-height: 100%;
+  height: 100%;
   width: 100%;
   /*min-width: 940px + 20px;*/
   overflow: hidden;
   position: relative; }
+
+.maincontent {
+  position: relative;
+  height: 800%;
+  min-height: 600px;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s; }
 
 .container {
   margin: 0 auto;
@@ -483,7 +491,8 @@ p {
   text-decoration: none;
   text-transform: uppercase; }
   .nav__link:hover {
-    text-decoration: underline; }
+    text-decoration: underline;
+    color: #f9b43b; }
 
 @media screen and (max-width: 768px) {
   .button__header {
@@ -1421,9 +1430,9 @@ p {
       .menu__accordion-item--active .menu__accordion-text {
         padding: 5%; } }
 
-/*.contact {
-	background: url(../../ifc/map.jpg) center center/cover no-repeat #80898e;
-}*/
+.contact {
+  position: relative; }
+
 .YMaps {
   display: block;
   position: relative;
