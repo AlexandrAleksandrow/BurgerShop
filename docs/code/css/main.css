@@ -369,11 +369,19 @@ body {
   box-sizing: border-box; }
 
 .wrapper {
-  min-height: 100%;
+  height: 100%;
   width: 100%;
   /*min-width: 940px + 20px;*/
   overflow: hidden;
   position: relative; }
+
+.maincontent {
+  position: relative;
+  height: 800%;
+  min-height: 600px;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s; }
 
 .container {
   margin: 0 auto;
@@ -483,7 +491,8 @@ p {
   text-decoration: none;
   text-transform: uppercase; }
   .nav__link:hover {
-    text-decoration: underline; }
+    text-decoration: underline;
+    color: #f9b43b; }
 
 @media screen and (max-width: 768px) {
   .button__header {
@@ -580,7 +589,20 @@ p {
   display: block;
   position: relative;
   width: 16px;
-  height: 16px; }
+  height: 16px;
+  /*
+	&:hover:after {
+	  display: block;
+    content: '';
+		position: absolute;		
+		width: 16px;
+		height: 16px;
+		top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+		border: 1px solid #fff;		
+	}*/ }
   .sidebar__link:before {
     display: block;
     content: '';
@@ -594,7 +616,26 @@ p {
     transform: translate(-50%, -50%);
     border-radius: 50%;
     background: #fff; }
-  .sidebar__link:hover:after {
+
+.sidebar__link--active {
+  display: block;
+  position: relative;
+  width: 16px;
+  height: 16px; }
+  .sidebar__link--active:before {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: #fff; }
+  .sidebar__link--active:after {
     display: block;
     content: '';
     position: absolute;
@@ -1421,9 +1462,9 @@ p {
       .menu__accordion-item--active .menu__accordion-text {
         padding: 5%; } }
 
-/*.contact {
-	background: url(../../ifc/map.jpg) center center/cover no-repeat #80898e;
-}*/
+.contact {
+  position: relative; }
+
 .YMaps {
   display: block;
   position: relative;
