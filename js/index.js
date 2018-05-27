@@ -1,8 +1,9 @@
-//Полноэкранное меню
+//Полноэкранное меню//
 
 const hamburger__menu = document.querySelector('.hamburger__menu');
 const menu__mob = document.querySelector('.menu__mob');
 const mob__close = document.querySelector('.mob__close');
+const mobItem = document.querySelectorAll('.menu__mob-item');
 
 hamburger__menu.addEventListener('click', function(event) {
   event.preventDefault();
@@ -18,25 +19,24 @@ mob__close.addEventListener('click', function(event) {
   document.body.style.overflow = '';
 })
 
+//Секция "Бургер" Иконка - состав бургера//
 
-//Секция "Бургер" Иконка - состав бургера
+const burgerComposition = document.querySelector('.burger__composition');
+const burgerPopup = document.querySelector('.burger__popup');
+const popupExit = document.querySelector('.popup__exit');
 
-const burger__composition = document.querySelector('.burger__composition');
-const burger__popup = document.querySelector('.burger__popup');
-const popup__exit = document.querySelector('.popup__exit');
-
-burger__composition.addEventListener('click', function(event) {
+burgerComposition.addEventListener('click', function(event) {
   event.preventDefault();
-  burger__popup.style.display = 'flex';
+  burgerPopup.style.display = 'flex';
 })
 
-popup__exit.addEventListener('click', function(event) {
+popupExit.addEventListener('click', function(event) {
   event.preventDefault();
-  burger__popup.style.display = '';
+  burgerPopup.style.display = '';
 })
 
 
-//Секция "Бургер" Слайдер
+//Секция "Бургер" Слайдер//
 
 const left = document.querySelector(".slider__arrow-letf");
 const right = document.querySelector(".slider__arrow-right");
@@ -64,7 +64,7 @@ left.addEventListener("click", function() {
 });
 
 
-//Секция "Меню" аккордеон
+//Секция "Меню" аккордеон//
 
 const acco = document.querySelector('.menu');
 const accoItem = document.querySelectorAll('.menu__accordion-item');
@@ -115,7 +115,7 @@ for (let i = 0; i < accoItem.length; i++) {
   })
 }
 
-//Секция "Команда" аккордеон
+//Секция "Команда" аккордеон//
 
 const team = document.querySelector('.team__block');
 const teamItem = document.querySelectorAll('.accordion__item');
@@ -140,7 +140,7 @@ for (let i = 0; i < teamItem.length; i++) {
 }
 
 
-//Секция "Отзывы" Модальное окно
+//Секция "Отзывы" Модальное окно//
 
 const reviewsList = document.querySelector('.reviews__list');
 const modal = document.querySelector('.modal');
@@ -189,10 +189,10 @@ modal.addEventListener('click', e => { //закрытие по клику на �
 })
 
 
-//Секция "Ordering" отправка данных из формы
+//Секция "Ordering" отправка данных из формы//
 
 
-//Contacts - Map
+//Contacts - Map//
 
 ymaps.ready(init);
 
@@ -248,53 +248,85 @@ function init() {
 }
 
 
-//OnePageScroll
+//OnePageScroll//
 
+const section = document.querySelectorAll('.section');
 const maincontent = document.querySelector('.maincontent');
+const homeScroll = document.querySelector('.home_scroll');
+const navLink = document.querySelector('.nav').querySelectorAll('.nav__link');
+
 
 const minTop = 0;
-const maxTop = -700;
 const stepTop = 100;
+const maxTop = -700;
 let currentTop = 0;
 
 maincontent.style.top = currentTop;
 
-document.addEventListener('wheel', (e) => {
-  
-  const deltaY = e.wheelDeltaY;  
+function movePosition(position) {
+  currentTop = position;
+  mainсontent.style.top = currentTop + '%';  
+}
 
-  if (deltaY < minTop) {
-    console.log('down');
+function scrollUp() {
+  if (currentTop < minTop) {
+    currentTop += stepTop;
+    maincontent.style.top = currentTop + '%';            
+  }
+}
+
+function scrollDown() {
+  if (currentTop > maxTop) {
     currentTop -= stepTop;
-    maincontent.style.top = currentTop + "%";
+    maincontent.style.top = currentTop + '%';      
+  }
+}
+
+document.addEventListener('wheel', (e) => {//в зависимости от того куда крутим колесо, применяем функции
+  console.log(e);
+  
+  const delta = e.wheelDelta;  
+
+  if (delta > 0) {
+    console.log('up');
+    scrollUp();
   }
 
-  if(deltaY > minTop) {
-    console.log('up');
-    currentTop += stepTop;
-    maincontent.style.top = currentTop + "%";
+  if(delta < 0) {
+    console.log('down');
+    scrollDown();
   }
 })
 
-/*
-const minRight = 0;
-const maxRight = 80;
-const step = 20;
-let currentRight = 0;
+document.addEventListener('keyup', e => { //скролл по отпусканию кнопки вверх вниз
+  const keyName = e.keyCode;
+  console.log(keyName);
 
-items.style.right = currentRight;
+  if (keyName === 38) {
+    scrollUp();
+  }
 
-right.addEventListener("click", function() {
-  if (currentRight < maxRight) {
-    currentRight += step;
-    items.style.right = currentRight + "%";
+  if (keyName === 40) {
+    scrollDown();
   }
 });
 
-left.addEventListener("click", function() {
-  if (currentRight > minRight) {
-    currentRight -= step;
-    items.style.right = currentRight + "%";
-  }
-});
-*/
+homeScroll.addEventListener('click', e => {//стрелка вниз
+  scrollDown();
+})
+
+
+//Header меню
+for (let i = 0; i < navLink.length; i++) {
+  navLink[i].addEventListener('click', e => {
+      e.preventDefault();
+      if (i != 6) {
+        movePosition(- (i + 1) * 100);
+      } else {
+        movePosition(- (i + 2) * 100);
+      }
+  })
+}
+
+
+
