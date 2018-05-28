@@ -62,14 +62,13 @@
  
   &:hover {
     text-decoration: underline;
-    color: #f9b43b;
    }
 }
 
 .button__header {
   @include tab {
     margin-left: auto;
-    margin-right: rem(50px);
+    margin-right: rem(25px);
   }
 }
 

@@ -34,7 +34,7 @@
 		background: #fff;	
 	}
 
-/*
+
 	&:hover:after {
 	  display: block;
     content: '';
@@ -46,41 +46,5 @@
     transform: translate(-50%, -50%);
     border-radius: 50%;
 		border: 1px solid #fff;		
-	}*/
-}
-
-
-.sidebar__link--active {
-	display: block;
-	position: relative;
-	width: 16px;
-  height: 16px;
-    
-
-	&:before {
-		display: block;
-    content: '';
-		position: absolute;		
-		width: 8px;
-		height: 8px;
-		top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-		background: #fff;	
-	}
-
-
-	&:after {
-	  display: block;
-    content: '';
-		position: absolute;		
-		width: 16px;
-		height: 16px;
-		top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-		border: 1px solid #fff;		
-	}
+	  }
 }

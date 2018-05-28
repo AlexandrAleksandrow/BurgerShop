@@ -1,9 +1,3 @@
-.summary__container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
 .summary__caption {
 	@include phon {
     font-size: rem(50px);
@@ -58,7 +52,7 @@
 	font-size: rem(14px);
 	font-weight: 400;
 	color: #838281;
-	line-height: 1.5;
+	line-height: 1.9;
 	text-align: center;
 
 	@include phon {
