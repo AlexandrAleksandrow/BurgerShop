@@ -252,9 +252,10 @@ function init() {
 
 const section = document.querySelectorAll('.section');
 const maincontent = document.querySelector('.maincontent');
-const homeScroll = document.querySelector('.home_scroll');
+const homeScroll = document.querySelector('.home_scroll'); 
 const navLink = document.querySelector('.nav').querySelectorAll('.nav__link');
 const sidebarLink = document.querySelector('.sidebar__link');
+const navList = document.querySelector('.nav__list');
 
 const minTop = 0;
 const stepTop = 100;
@@ -300,7 +301,7 @@ document.addEventListener('wheel', (e) => {//в зависимости от то
   }
 })
 
-document.addEventListener('keyup', e => { //скролл по отпусканию кнопки вверх вниз
+document.addEventListener('keyup', e => { //скролл по отпусканию стрелки вверх-вниз
   const keyName = e.keyCode;
   console.log(keyName);
 
@@ -313,17 +314,19 @@ document.addEventListener('keyup', e => { //скролл по отпускани
   }
 });
 
-homeScroll.addEventListener('click', e => {//стрелка вниз
+homeScroll.addEventListener('click', e => {//стрелка вниз на 1-й секции
   scrollDown();
 })
 
 
-//Sidebar
-
-for (let i = 0; i < sidebarLink.length; i++) {
-  sidebarLink[i].addEventListener('click', e => {
-    e.preventDefault();
-    moveTop(- i * 100);            
-  })
-}
-
+//Header - menu
+//navList.addEventListener('click', e=> {
+ // e.preventDefault();
+ // let element = e.target; // ловим кликнутый эелмент
+  
+ // if(element.tagName === 'A') { // если у кликнутого элемента тег А - ссылка, то выполняем код ниже
+    
+//    var scrollTo = element.dataset.scrollTo(); //получаем дата атрибут кликнутой ссылки
+ //   currentTop = - scrollTo * 100%;
+ // }
+//})   
