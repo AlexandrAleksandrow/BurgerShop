@@ -320,13 +320,12 @@ homeScroll.addEventListener('click', e => {//стрелка вниз на 1-й �
 
 
 //Header - menu
-//navList.addEventListener('click', e=> {
- // e.preventDefault();
- // let element = e.target; // ловим кликнутый эелмент
+navList.addEventListener('click', e=> {//обработчик кликов на список пунктов меню
+ e.preventDefault();
+ let element = e.target; // ловим кликнутый эелмент
   
- // if(element.tagName === 'A') { // если у кликнутого элемента тег А - ссылка, то выполняем код ниже
-    
-//    var scrollTo = element.dataset.scrollTo(); //получаем дата атрибут кликнутой ссылки
- //   currentTop = - scrollTo * 100%;
- // }
-//})   
+ if(element.tagName === 'A') { // если у кликнутого элемента тег А - ссылка, то выполняем код ниже
+   
+  maincontent.style.top =  -(element.dataset.scroll * 100) + '%';
+  }
+})   
