@@ -11,6 +11,7 @@
   left: 0;
   background: #2f3234;
   opacity: .98; 
+  z-index: 7;
 }
 
 .menu__mob-logo {
@@ -28,6 +29,9 @@
   font-size: rem(30px);
   font-weight: 700;
   text-decoration: none;
+  &:hover {
+    color: red;
+  }
 }
 
 .menu__mob-list {
@@ -42,8 +46,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;  
-
+  align-items: center;
+  
  &:after {
     display: block;
     content: '';			
