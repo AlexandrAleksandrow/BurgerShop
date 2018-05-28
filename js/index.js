@@ -254,7 +254,7 @@ const section = document.querySelectorAll('.section');
 const maincontent = document.querySelector('.maincontent');
 const homeScroll = document.querySelector('.home_scroll');
 const navLink = document.querySelector('.nav').querySelectorAll('.nav__link');
-
+const sidebarLink = document.querySelector('.sidebar__link');
 
 const minTop = 0;
 const stepTop = 100;
@@ -263,10 +263,12 @@ let currentTop = 0;
 
 maincontent.style.top = currentTop;
 
-function movePosition(position) {
+function moveTop(position) {
   currentTop = position;
-  mainсontent.style.top = currentTop + '%';  
+  mainContent.style.top = currentTop + '%';
+  sidebarActive();
 }
+
 
 function scrollUp() {
   if (currentTop < minTop) {
@@ -316,17 +318,12 @@ homeScroll.addEventListener('click', e => {//стрелка вниз
 })
 
 
-//Header меню
-for (let i = 0; i < navLink.length; i++) {
-  navLink[i].addEventListener('click', e => {
-      e.preventDefault();
-      if (i != 6) {
-        movePosition(- (i + 1) * 100);
-      } else {
-        movePosition(- (i + 2) * 100);
-      }
+//Sidebar
+
+for (let i = 0; i < sidebarLink.length; i++) {
+  sidebarLink[i].addEventListener('click', e => {
+    e.preventDefault();
+    moveTop(- i * 100);            
   })
 }
-
-
 
