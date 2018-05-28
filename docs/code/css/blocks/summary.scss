@@ -1,8 +1,3 @@
 .summary {
-	background: url(../../ifc/bg.jpg) center center/cover no-repeat;
-	padding-top: rem(110px);
-
-	@include phon {
-		padding-top: rem(70px);		
-	}
+	background: url(../../ifc/bg.jpg) center center/cover no-repeat;	
 }

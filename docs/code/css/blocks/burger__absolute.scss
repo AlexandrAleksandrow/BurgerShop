@@ -1,130 +1,135 @@
-.slider {
+.slider__arrow-letf {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 5;
+}
+
+.slider__arrow-right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+    z-index: 5;
+
+}
+
+.burger__composition {
+  position: absolute;
+  top: 0;
+  left: 4%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-	align-items: center;
-	width: 500%;	
-}
-
-.slider__content {
-	display: flex;
-	position: relative;
-	justify-content: center;
   align-items: center;
-	padding: 0 rem(16px);
-	width: 100%;
-	overflow: hidden;
-	transition: right 0.3s; 
+  width: rem(80px);
+  height: rem(80px);
+  background: #f08c33;
+  border-radius: rem(5px);
+  font-size: 14px;
+  font-family: "Gagalin";
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  z-index: 5;
+
+  &:hover {
+    background: #e35028;
+  }   
 }
 
-.slider__item {
-	display: flex;
-	position: relative;
-	align-items: center;
-	justify-content: center;
-	box-sizing: border-box;
-	width: 100%;
-	flex-basis: 100%;	
-  
-  @include tab {
-		flex-direction: column;		
-	}
+
+.burger__composition-img {
+  margin-bottom: 5px;
 }
 
-.slider__content-pic {
-	width: 50%;
-  text-align: center;
-	@include tab {
-		text-align: center;
-		width: 80%;
-	}
-	
-	@include phon {
-		text-align: center;
-		width: 100%;
-		padding: 20% 10% 0% 10%;
+.burger__popup {
+  position: absolute;
+  display: /*flex*/none;
+  top: 0;
+  left: 12.6%; 
+  width: rem(270px);
+  height: rem(330px);
+  background: #fff;
+  border-radius: rem(5px);
+  padding: rem(20px);
+  z-index: 5;
+
+  @include phon {
+    left: 4%;
+    top: 17.5%;
+    width: rem(240px);
   }
 }
 
-.slider__content-img {
-	max-width: 95%;	
+.popup__lits {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
 }
-
-.slider__content-text {
-	text-align: left;
-	width: 50%;
-	
-	@include tab {
-		text-align: center;
-		width: 80%;
-	}
-	
-	@include phon {
-		text-align: center;
-		width: 100%;
-	}
-}
-
-.slider__caption {
-  color: #fff;
-		
-	@include tab {
-		font-size: rem(50px);
-	}
-  
-	@include phon {
-		font-size: rem(45px);		
-	}
-}
-
-.slider__content-decs {
-	font-family: ubuntu;
-  font-size: rem(14px);
-  line-height: 1.4;
-	color: #fff;
-	
-	@include phon {
-		font-size: rem(10px);
-		padding: 0% 5%;		
-	}
-}
-
-.burger__price {
+.popup__item {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+}
+
+.popup__pic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(50px);
+  height: rem(50px);
+}
+
+.popup__ingredient {
+  margin-left: rem(20px);
+}
+
+.popup__weight {
+  margin-left: auto;
+}
+
+.popup__exit {
+  position: absolute;
+  top: 2%;
+  left: 90%;
+}
+
+.burger__calories {
+  position: absolute;
+  bottom: 0%;
+  left: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: rem(80px);
+  height: rem(85px);
+  background: transparent;
+  border-radius: rem(5px);
+  font-size: rem(14px);
+  font-family: "Gagalin";
+  color: #f9d19d;
+  text-transform: uppercase;
 
   @include tab {
-		justify-content: center;
+    top: 1%; 
+    left: auto;
+    right: 3%;    
 	}
 }
 
-.burger__price-text {
-	display: flex;
-	align-items: center;
-  font-size: rem(71px);
-  font-family: "Gagalin";
-  color: rgb(227, 80, 40);
-  white-space: nowrap;
-  margin: 0;
-  padding: 0;
-  margin-right: rem(25px);
-
-  @include phon {
-    font-size: rem(40px);	
-    margin-right: rem(15px);	
-	}
+.burger__calories-img {
+  margin-bottom: 5px;
 }
 
-.burger__price-subtext {
-  font-size: rem(30px);
-	margin: 0;
-	margin-left: 5%;
-  padding: 0;
-}
-
-.burger__button {
-	font-size: rem(14px);
-	
-	@include phon {
-    padding: 5px 10px;	
-	}
+.burger_calories-number {
+ position: absolute;
+ top: 35%;
+ left: 35%; 
+ font-size: rem(16px);
 }
