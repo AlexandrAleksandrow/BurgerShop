@@ -1,39 +1,52 @@
-//Полноэкранное меню//
+//Menu mobile
 
-const hamburger__menu = document.querySelector('.hamburger__menu');
-const menu__mob = document.querySelector('.menu__mob');
-const mob__close = document.querySelector('.mob__close');
+const hamburgerMenu = document.querySelector('.hamburger__menu');
+const menuMob = document.querySelector('.menu__mob');
+const mobClose = document.querySelector('.mob__close');
 const mobItem = document.querySelectorAll('.menu__mob-item');
+const mobList = document.querySelector('.menu__mob-list');
 
-hamburger__menu.addEventListener('click', function(event) {
+hamburgerMenu.addEventListener('click', function(event) {
   event.preventDefault();
-  menu__mob.style.display = 'flex';
-  hamburger__menu.style.display = 'none';
+  menuMob.style.display = 'flex';
+  hamburgerMenu.style.display = 'none';
   document.body.style.overflow = 'hidden';
 }) 
 
-mob__close.addEventListener('click', function(event) {
+mobClose.addEventListener('click', function(event) {
   event.preventDefault();
-  menu__mob.style.display = '';
-  hamburger__menu.style.display = '';
+  menuMob.style.display = '';
+  hamburgerMenu.style.display = '';
   document.body.style.overflow = '';
 })
 
-//Секция "Бургер" Иконка - состав бургера//
+mobList.addEventListener('click', e=> {//обработчик кликов на список пунктов меню
+  e.preventDefault();
+  let element = e.target; // ловим кликнутый эелмент
+   
+  if(element.tagName === 'A') { // если у кликнутого элемента тег А - ссылка, то выполняем код ниже
+    
+   maincontent.style.top =  -(element.dataset.scroll * 100) + '%'; // переход по позиции дата - атрибута
+   menuMob.style.display = '';
+   hamburgerMenu.style.display = 'flex'
+   }
+ })
+ 
+ //Секция "Бургер" Иконка - состав бургера//
 
-const burgerComposition = document.querySelector('.burger__composition');
-const burgerPopup = document.querySelector('.burger__popup');
-const popupExit = document.querySelector('.popup__exit');
+//const burgerComposition = document.querySelector('.burger__composition');
+//const burgerPopup = document.querySelector('.burger__popup');
+//const popupExit = document.querySelector('.popup__exit');
 
-burgerComposition.addEventListener('click', function(event) {
-  event.preventDefault();
-  burgerPopup.style.display = 'flex';
-})
+//burgerComposition.addEventListener('click', function(event) {
+//  event.preventDefault();
+//  burgerPopup.style.display = 'flex';
+//})
 
-popupExit.addEventListener('click', function(event) {
-  event.preventDefault();
-  burgerPopup.style.display = '';
-})
+//popupExit.addEventListener('click', function(event) {
+ // event.preventDefault();
+ // burgerPopup.style.display = '';
+//})
 
 
 //Секция "Бургер" Слайдер//
@@ -62,6 +75,25 @@ left.addEventListener("click", function() {
     items.style.right = currentRight + "%";
   }
 });
+
+
+//Состав бургеров *открытие модалки* по клику
+
+items.addEventListener('click', e=> {
+  e.preventDefault();
+  let element = e.target; // ловим кликнутый эелмент
+  
+  if(element.classList.contains('.burger__composition')) { // если у кликнутого элемента есть class:burger__popup, то выполняем код ниже
+    
+    burgerPopup.style.display = 'flex'; // показываем модальное окно со вставленным содержимым    
+  }
+}) 
+
+//modalClose.addEventListener('click', e => { //закрытие по клику на красный крестик
+//  e.preventDefault();
+//  modal.style.display = '';
+//  document.body.style.overflow = '';
+//})
 
 
 //Секция "Меню" аккордеон//
@@ -189,8 +221,7 @@ modal.addEventListener('click', e => { //закрытие по клику на �
 })
 
 
-//Секция "Ordering" отправка данных из формы//
-
+//Секция "Ordering" отправка данных из формы
 
 //Contacts - Map//
 
@@ -255,7 +286,6 @@ const maincontent = document.querySelector('.maincontent');
 const homeScroll = document.querySelector('.home_scroll'); 
 const navLink = document.querySelector('.nav').querySelectorAll('.nav__link');
 const sidebarLink = document.querySelector('.sidebar__link');
-const navList = document.querySelector('.nav__list');
 
 const minTop = 0;
 const stepTop = 100;
@@ -320,6 +350,8 @@ homeScroll.addEventListener('click', e => {//стрелка вниз на 1-й �
 
 
 //Header - menu
+const navList = document.querySelector('.nav__list');//список пунктов меню
+
 navList.addEventListener('click', e=> {//обработчик кликов на список пунктов меню
  e.preventDefault();
  let element = e.target; // ловим кликнутый эелмент
@@ -328,4 +360,32 @@ navList.addEventListener('click', e=> {//обработчик кликов на 
    
   maincontent.style.top =  -(element.dataset.scroll * 100) + '%';
   }
-})   
+}) 
+
+//Sidebar
+const sidebar = document.querySelector('.sidebar');//список пунктов Sidebar
+
+sidebar.addEventListener('click', e=> {//обработчик кликов на список пунктов меню
+  e.preventDefault();
+  let element = e.target; // ловим кликнутый эелмент
+   
+  if(element.tagName === 'A') { // если у кликнутого элемента тег А - ссылка, то выполняем код ниже
+    
+   maincontent.style.top =  -(element.dataset.scroll * 100) + '%';
+   element.classList.add('sidebar__link--active'); // назначение активного класса пункту сайдбара (надо сделать отмену при назначении его новомц элементу)
+  }
+}) 
+
+//Buttons
+
+maincontent.addEventListener('click', e=> {//обработчик кликов на maincontent
+  e.preventDefault();
+  let element = e.target; // ловим кликнутый эелмент
+   
+  if(element.classList.contains('button')) { // если у кликнутого элемента есть class: button, то выполняем код ниже
+    
+   maincontent.style.top =  -(element.dataset.scroll * 100) + '%';   
+  }
+}) 
+
+
