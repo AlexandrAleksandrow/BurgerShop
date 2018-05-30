@@ -1041,7 +1041,7 @@ p {
   position: absolute;
   display: none;
   top: 0;
-  left: 12.6%;
+  left: 4%;
   width: 16.875rem;
   height: 20.625rem;
   background: #fff;
@@ -1050,8 +1050,6 @@ p {
   z-index: 5; }
   @media screen and (max-width: 480px) {
     .burger__popup {
-      left: 4%;
-      top: 17.5%;
       width: 15rem; } }
 
 .popup__lits {
