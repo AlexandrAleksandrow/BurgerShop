@@ -12,7 +12,7 @@
 <div class="wrapper">
 <div class="maincontent">
 
-  <section class="section home">
+  <section class="section home" id="home">
     <div class="container">
       <header class="header">
        <a href="#" class="header__logo">
@@ -20,15 +20,15 @@
        </a>
         <nav class="nav">
           <ul class="nav__list">
-            <li class="nav__item"><a href="#" class="nav__link" data-scroll='1'>о нас</a></li>
-            <li class="nav__item"><a href="#" class="nav__link" data-scroll='2'>бургеры</a></li>
-            <li class="nav__item"><a href="#" class="nav__link" data-scroll='3'>команда</a></li>
-            <li class="nav__item"><a href="#" class="nav__link" data-scroll='4'>меню</a></li>
-            <li class="nav__item"><a href="#" class="nav__link" data-scroll='5'>отзывы</a></li>
-            <li class="nav__item"><a href="#" class="nav__link" data-scroll='7'>контакты</a></li>
+            <li class="nav__item"><a href="#summary" class="nav__link" data-scroll='1'>о нас</a></li>
+            <li class="nav__item"><a href="#burger" class="nav__link" data-scroll='2'>бургеры</a></li>
+            <li class="nav__item"><a href="#team" class="nav__link" data-scroll='3'>команда</a></li>
+            <li class="nav__item"><a href="#menu" class="nav__link" data-scroll='4'>меню</a></li>
+            <li class="nav__item"><a href="#reviews" class="nav__link" data-scroll='5'>отзывы</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link" data-scroll='7'>контакты</a></li>
           </ul>
         </nav> 
-        <a href="#" class="button button__header" data-scroll='6'>заказать</a>
+        <a href="#ordering" class="button button__header" data-scroll='6'>заказать</a>
         <a href="#" class="hamburger__menu">
           <ul class="hamburger__menu-list">
             <li class="hamburger__menu-item"></li>
@@ -48,11 +48,11 @@
         </div>
         </div>
         </div>
-      <div class="home_scroll"><a href="#" class="scroll__link"><img src="./ifc/arrow-scroll.png" alt="arrow" class="scroll_arrow"></a></div>
+      <div class="home_scroll"><a href="#summary" class="scroll__link"><img src="./ifc/arrow-scroll.png" alt="arrow" class="scroll_arrow"></a></div>
     </div>
     </section>
 
-  <section class="section summary">
+  <section class="section summary" id="summary">
       <div class="container summary__container">
       <div class="summary__caption caption">мы лучшие</div>
       <ul class="summary__list">
@@ -81,7 +81,7 @@
       </div>       
   </section>
 
-  <section class="section burger">
+  <section class="section burger" id="burger">
   <div class="container">
     <div class="burger__container">
     <div class="slider">
@@ -138,7 +138,7 @@
                 <div class="burger__price-text">500
                     <div class="burger__price-subtext">рублей</div>
                     </div>
-            <a href="#" class="button burger__button" data-scroll='6'>заказать</a>
+            <a href="#ordering" class="button burger__button" data-scroll='6'>заказать</a>
           </div>
           </div>
        </li>
@@ -192,7 +192,7 @@
                 <div class="burger__price-text">500
                     <div class="burger__price-subtext">рублей</div>
                     </div>
-            <a href="#" class="button burger__button" data-scroll='6'>заказать</a>
+            <a href="#ordering" class="button burger__button" data-scroll='6'>заказать</a>
           </div>
           </div>
        </li>
@@ -246,7 +246,7 @@
                 <div class="burger__price-text">500
                     <div class="burger__price-subtext">рублей</div>
                     </div>
-            <a href="#" class="button burger__button" data-scroll='6'>заказать</a>
+            <a href="#ordering" class="button burger__button" data-scroll='6'>заказать</a>
           </div>
           </div>
        </li>
@@ -303,7 +303,7 @@
                 <div class="burger__price-text">500
                     <div class="burger__price-subtext">рублей</div>
                     </div>
-            <a href="#" class="button burger__button" data-scroll='6'>заказать</a>
+            <a href="#ordering" class="button burger__button" data-scroll='6'>заказать</a>
           </div>
           </div>
        </li>
@@ -360,7 +360,7 @@
             <div class="burger__price-text">500
             <div class="burger__price-subtext">рублей</div>
             </div>
-            <a href="#" class="button burger__button" data-scroll='6'>заказать</a>
+            <a href="#ordering" class="button burger__button" data-scroll='6'>заказать</a>
           </div>
           </div>
        </li>
@@ -370,7 +370,7 @@
   </div>  
   </section>
 
-  <section class="section team">
+  <section class="section team" id="team">
    <div class="team__content">
      <div class="team__block">
       <div class="caption team_caption">команда</div>
@@ -428,7 +428,7 @@
    </div>
   </section>
 
-  <section class="section menu">
+  <section class="section menu" id="menu">
     <div class="menu__caption caption">меню</div>
     <ul class="menu__accordion">
       <li class="menu__accordion-item">
@@ -458,7 +458,7 @@
     </ul>    
   </section>
 
-  <section class="section reviews">
+  <section class="section reviews" id="reviews">
     <div class="reviews__container"> 
     <ul class="reviews__list">
       <li class="reviews__item" style="background-image: url(./ifc/faces/f1.jpg)">
@@ -545,7 +545,7 @@
     </div>
   </section>
 
-  <section class="section ordering">
+  <section class="section ordering" id="ordering">
   <div class="container container__ordering">
   <div class="ordering__caption caption">закажите доставку</div>
   <form action="server.php" method="post" name="form" class="form" id="order__form">
@@ -626,7 +626,7 @@
   </div>
   </section>
 
-  <section class="section contact">
+  <section class="section contact" id="contact">
       <div id="YMapsID" class="YMaps"></div>
     <div class=" container__footer footer">
      <div class="footer__left">
@@ -698,12 +698,12 @@
     <a href="#" class="mob__close">X</a>
     <nav class="menu__mob-nav">
       <ul class="menu__mob-list">
-        <li class="menu__mob-item"><a href="#" class="nav__link" data-scroll="1">о нас</a></li>
-        <li class="menu__mob-item"><a href="#" class="nav__link" data-scroll="2">бургеры</a></li>
-        <li class="menu__mob-item"><a href="#" class="nav__link" data-scroll="3">команда</a></li>
-        <li class="menu__mob-item"><a href="#" class="nav__link" data-scroll="4">меню</a></li>
-        <li class="menu__mob-item"><a href="#" class="nav__link" data-scroll="5">отзывы</a></li>
-        <li class="menu__mob-item"><a href="#" class="nav__link" data-scroll="7">контакты</a></li>
+        <li class="menu__mob-item"><a href="#summary" class="nav__link" data-scroll="1">о нас</a></li>
+        <li class="menu__mob-item"><a href="#burger" class="nav__link" data-scroll="2">бургеры</a></li>
+        <li class="menu__mob-item"><a href="#team" class="nav__link" data-scroll="3">команда</a></li>
+        <li class="menu__mob-item"><a href="#menu" class="nav__link" data-scroll="4">меню</a></li>
+        <li class="menu__mob-item"><a href="#reviews" class="nav__link" data-scroll="5">отзывы</a></li>
+        <li class="menu__mob-item"><a href="#contact" class="nav__link" data-scroll="7">контакты</a></li>
       </ul>
     </nav>
 </div>

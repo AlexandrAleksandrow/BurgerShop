@@ -369,9 +369,9 @@ body {
   box-sizing: border-box; }
 
 .wrapper {
-  height: 100%;
+  display: block;
+  min-height: 100%;
   width: 100%;
-  /*min-width: 940px + 20px;*/
   overflow: hidden;
   position: relative; }
 

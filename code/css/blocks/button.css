@@ -1,0 +1,20 @@
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #e45028;
+  border: 1px solid #e45028;
+  padding: 10px 15px;
+  border-radius: 4px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none; }
+  .button:hover {
+    background: #c1401e;
+    border-color: #c1401e; }
