@@ -2,7 +2,6 @@
 const hamburgerMenu = document.querySelector('.hamburger__menu');
 const menuMob = document.querySelector('.menu__mob');
 const mobClose = document.querySelector('.mob__close');
-const mobItem = document.querySelectorAll('.menu__mob-item');
 const mobList = document.querySelector('.menu__mob-list');
 
 hamburgerMenu.addEventListener('click', function(event) {
@@ -26,71 +25,32 @@ mobList.addEventListener('click', e=> {
 })
  
 
-//Секция "Бургер" Иконка - состав бургера//
-const burgerComposition = document.querySelector('.burger__composition');
-const burgerPopup = document.querySelectorAll('.burger__popup');
-const popupExit = document.querySelector('.popup__exit');
-
-burgerComposition.addEventListener('click', function(event) {
-  //event.preventDefault();
-  for (let item of burgerPopup) {      
-    burgerPopup.style.display = 'flex';
-  }  
-})
-
-popupExit.addEventListener('click', function(event) {
-  event.preventDefault();
-  for (let item of burgerPopup) {      
-    burgerPopup.style.display = '';
-  }  
-})
-
-
 //Секция "Бургер" Слайдер//
 
 const left = document.querySelector(".slider__arrow-letf");
 const right = document.querySelector(".slider__arrow-right");
-const items = document.querySelector(".slider__content");
+const sliderСontent = document.querySelector(".slider__content");
 
 const minRight = 0;
 const maxRight = 80;
 const step = 20;
 let currentRight = 0;
 
-items.style.right = currentRight;
+sliderСontent.style.right = currentRight;
 
 right.addEventListener("click", function() {
   if (currentRight < maxRight) {
     currentRight += step;
-    items.style.right = currentRight + "%";
+    sliderСontent.style.right = currentRight + "%";
   }
 });
 
 left.addEventListener("click", function() {
   if (currentRight > minRight) {
     currentRight -= step;
-    items.style.right = currentRight + "%";
+    sliderСontent.style.right = currentRight + "%";
   }
 });
-
-
-//Состав бургеров *открытие модалки* по клику
-
-/*items.addEventListener('click', e=> {
-  e.preventDefault();
-  let element = e.target; // ловим кликнутый эелмент
-  
-  if(element.classList.contains('.burger__composition')) { // если у кликнутого элемента есть class:burger__popup, то выполняем код ниже
-    
-    burgerPopup.style.display = 'flex'; // показываем модальное окно со вставленным содержимым    
-  }
-}) */
-
-//modalClose.addEventListener('click', e => { //закрытие по клику на красный крестик
-//  e.preventDefault();
-//  modal.style.display = '';
-//  document.body.style.overflow = '';
-//})
 
 
 //Секция "Меню" аккордеон//
@@ -143,6 +103,22 @@ for (let i = 0; i < accoItem.length; i++) {
     }
   })
 }
+
+//Секция "Меню" - состав бургеров
+const sliderItem = document.querySelector('.slider__item');
+const burgerPopup = document.querySelector('.burger__popup');
+const popupExit = document.querySelector('.popup__exit');
+
+sliderItem.addEventListener('click', function(e) {
+  
+  burgerPopup.classList.add('burger__poup-active')
+  /*let element = e.target;
+  if(element.classList.contains('.burger__composition')) {
+    burgerPopup.style.display = 'flex';
+  }*/
+})
+
+
 
 //Секция "Команда" аккордеон//
 
@@ -219,9 +195,7 @@ modal.addEventListener('click', e => {
 })
 
 
-//Секция "Ordering" отправка данных из формы
-
-//Contacts - Map//
+//Map
 
 ymaps.ready(init);
 
@@ -273,8 +247,24 @@ function init() {
 
   myMap.geoObjects.add(placemark);
   myMap.geoObjects.add(placemark1);
-  myMap.geoObjects.add(placemark2);  
+  myMap.geoObjects.add(placemark2);
 }
+
+
+// Sidebar
+const sidebar = document.querySelector('.sidebar');
+const ul = document.querySelector('ul');
+
+
+sidebar.addEventListener('click', function (e) {
+  const prevElem = document.querySelector('.sidebar__link--active');
+
+  if (prevElem) {
+    prevElem.classList.remove('sidebar__link--active');
+  }
+
+  e.target.classList.add('sidebar__link--active');
+});
 
 
 /*//OnePageScroll//
