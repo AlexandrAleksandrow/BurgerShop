@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1" />
   <title>BurgerShop</title>
   <link href="./code/css/main.css" rel="stylesheet">
 </head>
@@ -11,7 +12,7 @@
 <div class="wrapper">
 <div class="maincontent">
 
-  <section class="section home">
+  <section class="section home" id="home">
     <div class="container">
       <header class="header">
        <a href="#" class="header__logo">
@@ -19,15 +20,15 @@
        </a>
         <nav class="nav">
           <ul class="nav__list">
-            <li class="nav__item"><a href="#" class="nav__link">о нас</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">бургеры</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">команда</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">меню</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">отзывы</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">контакты</a></li>
+            <li class="nav__item"><a href="#summary" class="nav__link" data-scroll='1'>о нас</a></li>
+            <li class="nav__item"><a href="#burger" class="nav__link" data-scroll='2'>бургеры</a></li>
+            <li class="nav__item"><a href="#team" class="nav__link" data-scroll='3'>команда</a></li>
+            <li class="nav__item"><a href="#menu" class="nav__link" data-scroll='4'>меню</a></li>
+            <li class="nav__item"><a href="#reviews" class="nav__link" data-scroll='5'>отзывы</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link" data-scroll='7'>контакты</a></li>
           </ul>
         </nav> 
-        <a href="#" class="button button__header">заказать</a>
+        <a href="#ordering" class="button button__header" data-scroll='6'>заказать</a>
         <a href="#" class="hamburger__menu">
           <ul class="hamburger__menu-list">
             <li class="hamburger__menu-item"></li>
@@ -47,12 +48,12 @@
         </div>
         </div>
         </div>
-      <div class="home_scroll"><a href="#" class="scroll__link"><img src="./ifc/arrow-scroll.png" alt="arrow" class="scroll_arrow"></a></div>
+      <div class="home_scroll"><a href="#summary" class="scroll__link"><img src="./ifc/arrow-scroll.png" alt="arrow" class="scroll_arrow"></a></div>
     </div>
     </section>
 
-  <section class="section summary">
-      <div class="container">
+  <section class="section summary" id="summary">
+      <div class="container summary__container">
       <div class="summary__caption caption">мы лучшие</div>
       <ul class="summary__list">
         <li class="summary__item">
@@ -80,8 +81,9 @@
       </div>       
   </section>
 
-  <section class="section burger">
+  <section class="section burger" id="burger">
   <div class="container">
+    <div class="burger__container">
     <div class="slider">
       <div class="slider__arrow-letf"><img src="./ifc/arrow-left.png" alt="arrow-left" class="slider__arrow-img"></div>
       <div class="slider__arrow-right"><img src="./ifc/arrow-right.png" alt="arrow-right" class="slider__arrow-img"></div>
@@ -136,7 +138,7 @@
                 <div class="burger__price-text">500
                     <div class="burger__price-subtext">рублей</div>
                     </div>
-            <a href="#" class="button burger__button">заказать</a>
+            <a href="#ordering" class="button burger__button" data-scroll='6'>заказать</a>
           </div>
           </div>
        </li>
@@ -190,7 +192,7 @@
                 <div class="burger__price-text">500
                     <div class="burger__price-subtext">рублей</div>
                     </div>
-            <a href="#" class="button burger__button">заказать</a>
+            <a href="#ordering" class="button burger__button" data-scroll='6'>заказать</a>
           </div>
           </div>
        </li>
@@ -244,7 +246,7 @@
                 <div class="burger__price-text">500
                     <div class="burger__price-subtext">рублей</div>
                     </div>
-            <a href="#" class="button burger__button">заказать</a>
+            <a href="#ordering" class="button burger__button" data-scroll='6'>заказать</a>
           </div>
           </div>
        </li>
@@ -301,7 +303,7 @@
                 <div class="burger__price-text">500
                     <div class="burger__price-subtext">рублей</div>
                     </div>
-            <a href="#" class="button burger__button">заказать</a>
+            <a href="#ordering" class="button burger__button" data-scroll='6'>заказать</a>
           </div>
           </div>
        </li>
@@ -358,16 +360,17 @@
             <div class="burger__price-text">500
             <div class="burger__price-subtext">рублей</div>
             </div>
-            <a href="#" class="button burger__button">заказать</a>
+            <a href="#ordering" class="button burger__button" data-scroll='6'>заказать</a>
           </div>
           </div>
        </li>
       </ul>               
   </div>
+  </div>
   </div>  
   </section>
 
-  <section class="section team">
+  <section class="section team" id="team">
    <div class="team__content">
      <div class="team__block">
       <div class="caption team_caption">команда</div>
@@ -425,7 +428,7 @@
    </div>
   </section>
 
-  <section class="section menu">
+  <section class="section menu" id="menu">
     <div class="menu__caption caption">меню</div>
     <ul class="menu__accordion">
       <li class="menu__accordion-item">
@@ -455,7 +458,7 @@
     </ul>    
   </section>
 
-  <section class="section reviews">
+  <section class="section reviews" id="reviews">
     <div class="reviews__container"> 
     <ul class="reviews__list">
       <li class="reviews__item" style="background-image: url(./ifc/faces/f1.jpg)">
@@ -542,10 +545,10 @@
     </div>
   </section>
 
-  <section class="section ordering">
+  <section class="section ordering" id="ordering">
   <div class="container container__ordering">
   <div class="ordering__caption caption">закажите доставку</div>
-  <form method="get" name="form" class="form">
+  <form action="server.php" method="post" name="form" class="form" id="order__form">
   <div class="form__column">
     <div class="form__row">
       <div class="form__item ">   
@@ -556,31 +559,31 @@
       <label class="form__label">Телефон</label>
       <input type="text" name="phone" class="form__input">						
     </div>
-  </div>
-  <div class="form__row">
-  <div class="form__item">
-    <label class="form__label">Улица</label>
-    <input type="text" name="street" class="form__input">						
-  </div>
-  </div>
-  <div class="form__row">
-  <div class="form__item">
-    <label class="form__label">Дом</label>
-    <input type="text" name="house" class="form__input">						
-  </div>
-  <div class="form__item">
-      <label class="form__label">Корпус</label>
-      <input type="text" name="housing" class="form__input">						
-  </div>
-  <div class="form__item">
-      <label class="form__label">Квартира</label>
-      <input type="text" name="apartment" class="form__input">						
-  </div>
-  <div class="form__item">
-      <label class="form__label">Этаж</label>
-      <input type="text" name="floor" class="form__input">						
-  </div>
-  </div>
+    </div>
+    <div class="form__row">
+     <div class="form__item">
+       <label class="form__label">Улица</label>
+       <input type="text" name="street" class="form__input">						
+     </div>
+   </div>
+    <div class="form__row">
+      <div class="form__item">
+        <label class="form__label">Дом</label>
+        <input type="text" name="house" class="form__input">						
+      </div>
+      <div class="form__item">
+        <label class="form__label">Корпус</label>
+        <input type="text" name="housing" class="form__input">						
+      </div>
+      <div class="form__item">
+        <label class="form__label">Квартира</label>
+        <input type="text" name="apartment" class="form__input">						
+      </div>
+      <div class="form__item">
+        <label class="form__label">Этаж</label>
+        <input type="text" name="floor" class="form__input">						
+      </div>
+    </div>
   </div>
   <div class="form__column">
     <div class="form__row">
@@ -588,47 +591,44 @@
       <label class="form__label">Комментарий</label> 
       <textarea rows="10" cols="30" name="comment" class="form__input form__input-textarea"></textarea>
       </div>
-  </div>
-  <div class="form__buttons">
-  <div class="form__row form__row--margin">
-  <label class="form__radio">
-      <input type="radio" name="yes" value="radio1" class="form__input-radio">
+    </div>
+    <div class="form__buttons">
+      <div class="form__row form__row--margin">
+      <label class="form__radio">
+      <input type="radio" name="yes" value="radio1" class="form__input-radio" id="need-change">
       <div class="form__circle">
         <div class="form__inner"></div>
       </div>
       <span class="form__label">Потребутся сдача</span>
     </label>    
     <label class="form__radio">
-      <input type="radio" name="yes" value="radio1" class="form__input-radio">
+      <input type="radio" name="yes" value="radio1" class="form__input-radio" id="pay-card">
       <div class="form__circle">
         <div class="form__inner"></div>
       </div>
       <span class="form__label">Оплата по карте</span>
     </label>
   </div>
+  </div>
   <div class="form_row">
     <label class="form__checkbox">
-      <input type="checkbox" class="form__checkbox--invisible" name="callback">
+      <input type="checkbox" class="form__checkbox--invisible" name="callback" id="callback">
       <div class="form__checkbox--visible"><img src="./ifc/check.png" alt="check" class="check__img"></div>
       <span class="form__label">Не перезванивать</span>
-    </labe>
+    </label>
   </div>
   <div class="form__row">
-  <div class="form__button">		
-    <a href="#" class="form__submit button">Заказать</a>
+      <button class="form__submit button">Заказать</button>
+      <button class="form__submit button">Очистить</button>    
   </div>
-  <div class="form__button">		
-    <a href="#" class="form__submit button">Очистить</a>
-  </div>
-  </div>
-  </div>
-  </div>
+  </div>  
   </form>
   </div>
   </section>
 
-  <section class="section contact">
-    <div class="footer container__footer">
+  <section class="section contact" id="contact">
+      <div id="YMapsID" class="YMaps"></div>
+    <div class=" container__footer footer">
      <div class="footer__left">
        <div class="footer__adress">Санкт-Петербург, ул. Бабушкина, д.12/1</div>
        <a href="tel:+78123132488" class="footer__phone">8(812)313-24-88</a>
@@ -662,30 +662,32 @@
     </div>
   </section>
 
+
+
   <ul class="sidebar">
-      <li class="sidebar__item sidebar__item--active">
-        <a href="#" class="sidebar__link"></a>
+      <li class="sidebar__item">
+        <a href="#" class="sidebar__link" data-scroll="8"></a>
       </li>
       <li class="sidebar__item">
-        <a href="#" class="sidebar__link"></a>
+        <a href="#summary" class="sidebar__link" data-scroll="1"></a>
       </li>
       <li class="sidebar__item">
-        <a href="#" class="sidebar__link"></a>
+        <a href="#burger" class="sidebar__link" data-scroll="2"></a>
       </li>
       <li class="sidebar__item">
-        <a href="#" class="sidebar__link"></a>
+        <a href="#team" class="sidebar__link" data-scroll="3"></a>
       </li>
       <li class="sidebar__item">
-        <a href="#" class="sidebar__link"></a>
+        <a href="#menu" class="sidebar__link" data-scroll="4"></a>
       </li>
       <li class="sidebar__item">
-        <a href="#" class="sidebar__link"></a>
+        <a href="#reviews" class="sidebar__link" data-scroll="5"></a>
       </li>
       <li class="sidebar__item">
-        <a href="#" class="sidebar__link"></a>
+        <a href="#ordering" class="sidebar__link" data-scroll="6"></a>
       </li>
       <li class="sidebar__item">
-        <a href="#" class="sidebar__link"></a>
+        <a href="#contact" class="sidebar__link" data-scroll="7"></a>
       </li>
     </ul>
 
@@ -698,12 +700,12 @@
     <a href="#" class="mob__close">X</a>
     <nav class="menu__mob-nav">
       <ul class="menu__mob-list">
-        <li class="menu__mob-item"><a href="#" class="nav__link">о нас</a></li>
-        <li class="menu__mob-item"><a href="#" class="nav__link">бургеры</a></li>
-        <li class="menu__mob-item"><a href="#" class="nav__link">команда</a></li>
-        <li class="menu__mob-item"><a href="#" class="nav__link">меню</a></li>
-        <li class="menu__mob-item"><a href="#" class="nav__link">отзывы</a></li>
-        <li class="menu__mob-item"><a href="#" class="nav__link">контакты</a></li>
+        <li class="menu__mob-item"><a href="#summary" class="nav__link" data-scroll="1">о нас</a></li>
+        <li class="menu__mob-item"><a href="#burger" class="nav__link" data-scroll="2">бургеры</a></li>
+        <li class="menu__mob-item"><a href="#team" class="nav__link" data-scroll="3">команда</a></li>
+        <li class="menu__mob-item"><a href="#menu" class="nav__link" data-scroll="4">меню</a></li>
+        <li class="menu__mob-item"><a href="#reviews" class="nav__link" data-scroll="5">отзывы</a></li>
+        <li class="menu__mob-item"><a href="#contact" class="nav__link" data-scroll="7">контакты</a></li>
       </ul>
     </nav>
 </div>
@@ -716,6 +718,8 @@
       <div class="modal__text"></div>
    </div>
 </div>
-  <script src="./js/index.js"></script>
+<script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="./js/index.js"></script>
 </body>
 </html>

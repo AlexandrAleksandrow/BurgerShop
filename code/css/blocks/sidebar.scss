@@ -18,24 +18,31 @@
 	display: block;
 	position: relative;
 	width: 16px;
-  height: 16px;
-    
+	height: 16px;
+
 
 	&:before {
 		display: block;
-    content: '';
-		position: absolute;		
+		content: '';
+		position: absolute;
 		width: 8px;
 		height: 8px;
 		top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-		background: #fff;	
+		background: #fff;
 	}
+}
 
 
-	&:hover:after {
+.sidebar__link--active {
+	display: block;
+	position: relative;
+	width: 16px;
+  height: 16px;
+    
+	&:after {
 	  display: block;
     content: '';
 		position: absolute;		
@@ -46,5 +53,5 @@
     transform: translate(-50%, -50%);
     border-radius: 50%;
 		border: 1px solid #fff;		
-	  }
+	}
 }
