@@ -38,9 +38,8 @@
 
   &:hover {
     background: #e35028;
-  }   
+  }
 }
-
 
 .burger__composition-img {
   margin-bottom: 5px;
@@ -61,6 +60,10 @@
   @include phon {
     width: rem(240px);
   }
+}
+
+.burger__poup-active {
+  display: flex;
 }
 
 .popup__lits {
